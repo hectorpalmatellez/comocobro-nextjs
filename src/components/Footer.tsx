@@ -78,32 +78,27 @@ export function Footer() {
                         <ul className="d-flex list-unstyled gap-3">
                             <li className="social">
                                 <a href="#">
-                                    <iconify-icon className="social-icon fs-5 me-4"
-                                                  icon="ri:facebook-fill"></iconify-icon>
+
                                 </a>
                             </li>
                             <li className="social">
                                 <a href="#">
-                                    <iconify-icon className="social-icon fs-5 me-4"
-                                                  icon="ri:twitter-fill"></iconify-icon>
+
                                 </a>
                             </li>
                             <li className="social">
                                 <a href="#">
-                                    <iconify-icon className="social-icon fs-5 me-4"
-                                                  icon="ri:pinterest-fill"></iconify-icon>
+
                                 </a>
                             </li>
                             <li className="social">
                                 <a href="#">
-                                    <iconify-icon className="social-icon fs-5 me-4"
-                                                  icon="ri:instagram-fill"></iconify-icon>
+
                                 </a>
                             </li>
                             <li className="social">
                                 <a href="#">
-                                    <iconify-icon className="social-icon fs-5 me-4"
-                                                  icon="ri:youtube-fill"></iconify-icon>
+
                                 </a>
                             </li>
 
@@ -111,10 +106,7 @@ export function Footer() {
                     </div>
                 </div>
                 <div className="col-md-6 text-md-end">
-                    <p className="footer-para m-0">Free HTML Template By: <a href="https://templatesjungle.com/"
-                                                                             target="_blank"
-                                                                             className="text-decoration-underline text-capitalize footer-link"> TemplatesJungle</a>
-                    </p>
+                    <p className="footer-para m-0">---</p>
                 </div>
             </div>
         </div>

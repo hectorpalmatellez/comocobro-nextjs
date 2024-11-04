@@ -12,7 +12,8 @@ export default function Testimonial() {
                              style={{width: 624, marginRight: 20}}>
                             <div className="review">
                                 <div className="review-content d-lg-flex">
-                                    <iconify-icon icon="gg:quote" className="display-1"></iconify-icon>
+                                    [icon]
+                                    {/* className="display-1"*/}
                                     <div>
                                         <p className="fs-3 fw-bold">Pretium turpis faucibus adipiscing duis. Id quis
                                             tristique mi vitae nec. In
@@ -28,7 +29,7 @@ export default function Testimonial() {
                              style={{width: 624, marginRight: 20}}>
                             <div className="review">
                                 <div className="review-content d-lg-flex">
-                                    <iconify-icon icon="gg:quote" className="display-1"></iconify-icon>
+                                    [icon]
                                     <div>
                                         <p className="fs-3 fw-bold">Pretium turpis faucibus adipiscing duis. Id quis
                                             tristique mi vitae nec. In
@@ -44,7 +45,7 @@ export default function Testimonial() {
                              style={{width: 624, marginRight: 20}}>
                             <div className="review">
                                 <div className="review-content d-lg-flex">
-                                    <iconify-icon icon="gg:quote" className="display-1"></iconify-icon>
+                                    [icon]
                                     <div>
                                         <p className="fs-3 fw-bold">Pretium turpis faucibus adipiscing duis. Id quis
                                             tristique mi vitae nec. In

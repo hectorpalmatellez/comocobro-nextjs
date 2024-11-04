@@ -37,22 +37,19 @@ export default function AboutUs() {
                                   pellentesque felis.</p>
                               <div className="mb-4">
                                   <h6 className=" mb-3">Hotel &amp; tourism</h6>
-                                  <div className="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
-                                       aria-valuemax="100" style={{height: 10, borderRadius: 0}}>
+                                  <div className="progress" role="progressbar" style={{height: 10, borderRadius: 0}}>
                                       <div className="progress-bar bg-primary" style={{width: '25%'}}></div>
                                   </div>
                               </div>
                               <div className="mb-4">
                                   <h6 className=" mb-3">E-commerce</h6>
-                                  <div className="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
-                                       aria-valuemax="100" style={{height: 10, borderRadius: 0}}>
+                                  <div className="progress" role="progressbar" style={{height: 10, borderRadius: 0}}>
                                       <div className="progress-bar bg-primary" style={{width: '25%'}}></div>
                                   </div>
                               </div>
                               <div className="mb-4">
                                   <h6 className=" mb-3">Non Profit</h6>
-                                  <div className="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
-                                       aria-valuemax="100" style={{height: 10, borderRadius: 0}}>
+                                  <div className="progress" role="progressbar" style={{height: 10, borderRadius: 0}}>
                                       <div className="progress-bar bg-primary" style={{width: '25%'}}></div>
                                   </div>
                               </div>

@@ -33,7 +33,6 @@ export default function Document() {
                 crossOrigin="anonymous"></Script>
         <Script src="/js/plugins.js" strategy="lazyOnload"></Script>
         <Script src="/js/script.js" strategy="lazyOnload"></Script>
-        <Script src="//code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></Script>
         </body>
     </Html>
   );
