@@ -1,11 +1,11 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import {GoogleAnalytics} from '@next/third-parties/google';
 import Script from "next/script";
 
 import Nav from "../components/Nav";
 import {Footer} from "../components/Footer";
 
 export default function Document() {
+    const gaId = 'G-1SCWR09BCR';
   return (
     <Html lang="en">
         <Head>
@@ -22,7 +22,24 @@ export default function Document() {
             <link
                 href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
                 rel="stylesheet"/>
-            <GoogleAnalytics gaId="G-1SCWR09BCR" />
+            <Script
+                strategy="afterInteractive"
+                src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+            />
+            <Script
+                id="google-analytics"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${gaId}', {
+                page_path: window.location.pathname,
+              });
+            `,
+                }}
+            />
         </Head>
         <body>
         <Nav/>
