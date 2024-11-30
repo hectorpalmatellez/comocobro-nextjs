@@ -1,4 +1,4 @@
-export function Footer() {
+export default function Footer() {
     return (<footer id="footer">
         <div className="container padding-medium">
             <div className="row">
@@ -24,7 +24,7 @@ export function Footer() {
                     <div className="footer-menu">
                         <ul className="menu-list list-unstyled">
                             <li className="menu-item mb-3">
-                                <a href="#" className="footer-link">Home</a>
+                                <a href="#" className="footer-link">Inicio</a>
                             </li>
                             <li className="menu-item mb-3">
                                 <a href="#" className="footer-link">About us</a>
