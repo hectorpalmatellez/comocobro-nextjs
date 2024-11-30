@@ -26,10 +26,10 @@ export default function Nav() {
 
                     <ul className="navbar-nav menu-list list-unstyled d-flex gap-md-3 ps-lg-5 mb-0">
                         <li className="nav-item">
-                            <Link href="/" className="nav-link mx-3 active">Home</Link>
+                            <Link href="/" className="nav-link mx-3 active">Inicio</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="#" className="nav-link mx-3">About us</a>
+                            <Link href="/calculadora" className="nav-link mx-3">Calculadora de precios</Link>
                         </li>
                         <li className="nav-item">
                             <a href="#" className="nav-link mx-3">Works</a>
@@ -40,18 +40,13 @@ export default function Nav() {
                         <li className="nav-item">
                             <a href="#" className="nav-link mx-3">Contact</a>
                         </li>
-                        <li className="nav-item">
-                            <a href="https://templatesjungle.gumroad.com/l/codeo-html-website-template-for-agencies"
-                               className="nav-link mx-3 text-decoration-underline" target="_blank">GET PRO</a>
-                        </li>
+                        
                     </ul>
 
                     <div className="d-none d-lg-flex align-items-end">
                     </div>
                 </div>
             </div>
-
         </div>
-
     </nav>)
 }
