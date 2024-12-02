@@ -65,7 +65,7 @@ export default function PriceCalculator() {
                                    required
                                    onKeyUp={formatNumber}/>
                             <div className="invalid-feedback">
-                                Please enter a valid expected earning.
+                                Ingresa una ganancia esperada válida.
                             </div>
                         </div>
                         <div className="mb-3">
@@ -73,7 +73,7 @@ export default function PriceCalculator() {
                             <input type="text" className="form-control" id="baseCosts" placeholder="Enter base costs"
                                    required onKeyUp={formatNumber}/>
                             <div className="invalid-feedback">
-                                Please enter a valid base cost.
+                                Ingresa un monto base válido
                             </div>
                         </div>
                         <div className="mb-3">
@@ -81,7 +81,7 @@ export default function PriceCalculator() {
                             <input type="text" className="form-control" id="additionalAmount"
                                    placeholder="Enter additional amount"/>
                             <div className="invalid-feedback">
-                                Please enter a valid additional amount.
+                                Ingresa un monto válido.
                             </div>
                             <small className="form-text text-muted">
                                 Por ejemplo: envío, transporte, gastos de embalaje, etc.
@@ -92,7 +92,7 @@ export default function PriceCalculator() {
 
                     {result !== null && (
                         <div className="mt-4">
-                            <h5>Suggested price: {formatter.format(result.totalCost)}</h5>
+                            <h5>Precio sugerido: {formatter.format(result.totalCost)}</h5>
                             <h6>IVA (19%): {formatter.format(result.taxAmount)}</h6>
                         </div>
                     )}
