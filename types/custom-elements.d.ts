@@ -1,4 +1,3 @@
 declare namespace JSX {
-    interface IntrinsicElements {
-    }
+  interface IntrinsicElements {}
 }
