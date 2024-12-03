@@ -18,8 +18,7 @@ export default function PriceCalculator() {
 
     // Function to remove non-digit characters and convert to number
     const getNumericValue = (selector: string) => {
-      const inputValue = (form.querySelector(selector) as HTMLInputElement)
-        .value;
+      const inputValue = (form.querySelector(selector) as HTMLInputElement).value;
       return Number(inputValue.replace(/\D/g, '')) || 0;
     };
 
@@ -28,8 +27,7 @@ export default function PriceCalculator() {
     const additionalAmount = getNumericValue('#additionalAmount');
 
     const taxAmount = (expectedEarning * TAX_RATE) / 100;
-    const totalCost =
-      baseCosts + expectedEarning + taxAmount + additionalAmount;
+    const totalCost = baseCosts + expectedEarning + taxAmount + additionalAmount;
 
     setResult({ totalCost, taxAmount });
   };
@@ -42,18 +40,13 @@ export default function PriceCalculator() {
     const clearedValue = input.value.replace(/\D/g, '');
 
     // Format the number and update input value
-    const formattedValue = clearedValue
-      ? formatter.format(Number(clearedValue))
-      : '';
+    const formattedValue = clearedValue ? formatter.format(Number(clearedValue)) : '';
     input.value = formattedValue;
 
     // Adjust cursor position after formatting to maintain usability
     if (formattedValue) {
       const lengthDifference = formattedValue.length - clearedValue.length;
-      input.setSelectionRange(
-        initialCursorPos + lengthDifference,
-        initialCursorPos + lengthDifference
-      );
+      input.setSelectionRange(initialCursorPos + lengthDifference, initialCursorPos + lengthDifference);
     }
   };
 
@@ -63,15 +56,8 @@ export default function PriceCalculator() {
         <div className="container">
           <h2>Price Calculator</h2>
         </div>
-        <div
-          className="container"
-          style={{ paddingTop: 90, paddingBottom: 120 }}
-        >
-          <form
-            id="priceForm"
-            className="needs-validation"
-            onSubmit={handleSubmit}
-          >
+        <div className="container" style={{ paddingTop: 90, paddingBottom: 120 }}>
+          <form id="priceForm" className="needs-validation" onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="expectedEarning" className="form-label">
                 Ganancia esperada
@@ -84,9 +70,7 @@ export default function PriceCalculator() {
                 required
                 onKeyUp={formatNumber}
               />
-              <div className="invalid-feedback">
-                Ingresa una ganancia esperada válida.
-              </div>
+              <div className="invalid-feedback">Ingresa una ganancia esperada válida.</div>
             </div>
             <div className="mb-3">
               <label htmlFor="baseCosts" className="form-label">
@@ -100,24 +84,15 @@ export default function PriceCalculator() {
                 required
                 onKeyUp={formatNumber}
               />
-              <div className="invalid-feedback">
-                Ingresa un monto base válido
-              </div>
+              <div className="invalid-feedback">Ingresa un monto base válido</div>
             </div>
             <div className="mb-3">
               <label htmlFor="additionalAmount" className="form-label">
                 Costos adicionales
               </label>
-              <input
-                type="text"
-                className="form-control"
-                id="additionalAmount"
-                placeholder="Enter additional amount"
-              />
+              <input type="text" className="form-control" id="additionalAmount" placeholder="Enter additional amount" />
               <div className="invalid-feedback">Ingresa un monto válido.</div>
-              <small className="form-text text-muted">
-                Por ejemplo: envío, transporte, gastos de embalaje, etc.
-              </small>
+              <small className="form-text text-muted">Por ejemplo: envío, transporte, gastos de embalaje, etc.</small>
             </div>
             <button type="submit" className="btn btn-primary">
               Calculate

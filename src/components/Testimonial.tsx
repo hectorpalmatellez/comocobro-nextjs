@@ -7,32 +7,23 @@ export default function Testimonial() {
       <div className="container">
         <div className="offset-md-2 col-md-8 ">
           <div className="swiper testimonial-swiper py-3 py-md-5 swiper-initialized swiper-horizontal swiper-backface-hidden">
-            <div
-              className="swiper-wrapper"
-              id="swiper-wrapper-8584203385a75e17"
-              aria-live="polite"
-            >
+            <div className="swiper-wrapper" id="swiper-wrapper-8584203385a75e17" aria-live="polite">
               <div
                 className="swiper-slide swiper-slide-active"
                 role="group"
                 aria-label="1 / 3"
-                style={{ width: 624, marginRight: 20 }}
-              >
+                style={{ width: 624, marginRight: 20 }}>
                 <div className="review">
                   <div className="review-content d-lg-flex">
                     [icon]
                     {/* className="display-1"*/}
                     <div>
                       <p className="fs-3 fw-bold">
-                        Pretium turpis faucibus adipiscing duis. Id quis
-                        tristique mi vitae nec. In et in praesent pellentesque.
-                        Porta sit porta ridiculus faucibus.
+                        Pretium turpis faucibus adipiscing duis. Id quis tristique mi vitae nec. In et in praesent
+                        pellentesque. Porta sit porta ridiculus faucibus.
                       </p>
                       <p className="fw-bold">
-                        John Geoffrey{' '}
-                        <span className="fw-normal">
-                          | Hexagon Builders inc., USA
-                        </span>
+                        John Geoffrey <span className="fw-normal">| Hexagon Builders inc., USA</span>
                       </p>
                     </div>
                   </div>
@@ -42,47 +33,33 @@ export default function Testimonial() {
                 className="swiper-slide swiper-slide-next"
                 role="group"
                 aria-label="2 / 3"
-                style={{ width: 624, marginRight: 20 }}
-              >
+                style={{ width: 624, marginRight: 20 }}>
                 <div className="review">
                   <div className="review-content d-lg-flex">
                     [icon]
                     <div>
                       <p className="fs-3 fw-bold">
-                        Pretium turpis faucibus adipiscing duis. Id quis
-                        tristique mi vitae nec. In et in praesent pellentesque.
-                        Porta sit porta ridiculus faucibus.
+                        Pretium turpis faucibus adipiscing duis. Id quis tristique mi vitae nec. In et in praesent
+                        pellentesque. Porta sit porta ridiculus faucibus.
                       </p>
                       <p className="fw-bold">
-                        John Geoffrey{' '}
-                        <span className="fw-normal">
-                          | Hexagon Builders inc., USA
-                        </span>
+                        John Geoffrey <span className="fw-normal">| Hexagon Builders inc., USA</span>
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div
-                className="swiper-slide"
-                role="group"
-                aria-label="3 / 3"
-                style={{ width: 624, marginRight: 20 }}
-              >
+              <div className="swiper-slide" role="group" aria-label="3 / 3" style={{ width: 624, marginRight: 20 }}>
                 <div className="review">
                   <div className="review-content d-lg-flex">
                     [icon]
                     <div>
                       <p className="fs-3 fw-bold">
-                        Pretium turpis faucibus adipiscing duis. Id quis
-                        tristique mi vitae nec. In et in praesent pellentesque.
-                        Porta sit porta ridiculus faucibus.
+                        Pretium turpis faucibus adipiscing duis. Id quis tristique mi vitae nec. In et in praesent
+                        pellentesque. Porta sit porta ridiculus faucibus.
                       </p>
                       <p className="fw-bold">
-                        John Geoffrey{' '}
-                        <span className="fw-normal">
-                          | Hexagon Builders inc., USA
-                        </span>
+                        John Geoffrey <span className="fw-normal">| Hexagon Builders inc., USA</span>
                       </p>
                     </div>
                   </div>
@@ -95,26 +72,11 @@ export default function Testimonial() {
                 tabIndex={0}
                 role="button"
                 aria-label="Go to slide 1"
-                aria-current="true"
-              ></span>
-              <span
-                className="swiper-pagination-bullet"
-                tabIndex={0}
-                role="button"
-                aria-label="Go to slide 2"
-              ></span>
-              <span
-                className="swiper-pagination-bullet"
-                tabIndex={0}
-                role="button"
-                aria-label="Go to slide 3"
-              ></span>
+                aria-current="true"></span>
+              <span className="swiper-pagination-bullet" tabIndex={0} role="button" aria-label="Go to slide 2"></span>
+              <span className="swiper-pagination-bullet" tabIndex={0} role="button" aria-label="Go to slide 3"></span>
             </div>
-            <span
-              className="swiper-notification"
-              aria-live="assertive"
-              aria-atomic="true"
-            ></span>
+            <span className="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
           </div>
         </div>
       </div>

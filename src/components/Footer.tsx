@@ -7,9 +7,8 @@ export default function Footer() {
             <div className="footer-menu">
               <img src="images/logo-dark.png" alt="logo" />
               <p className="text-white mt-3">
-                Ea, facilis sint. Deleniti libero placeat qui pariatur nihil. Ab
-                officia odit iusto ullam? Error, eum sed magnam nihil dolores
-                illum nisi!
+                Ea, facilis sint. Deleniti libero placeat qui pariatur nihil. Ab officia odit iusto ullam? Error, eum
+                sed magnam nihil dolores illum nisi!
               </p>
               <form>
                 <div className="mb-3">
@@ -22,10 +21,7 @@ export default function Footer() {
                   />
                 </div>
                 <div className="d-grid gap-2">
-                  <button
-                    type="submit"
-                    className="btn btn-dark btn-lg rounded-3"
-                  >
+                  <button type="submit" className="btn btn-dark btn-lg rounded-3">
                     Register now
                   </button>
                 </div>
@@ -92,8 +88,7 @@ export default function Footer() {
           <div className="col-md-4">
             <div className="footer-menu">
               <p className="text-white">
-                Harum officiis beatae quisquam ratione nostrum ipsum, delectus
-                minima aliquam ut quaerat?
+                Harum officiis beatae quisquam ratione nostrum ipsum, delectus minima aliquam ut quaerat?
               </p>
               <a href="#" className="text-white fs-3 text-decoration-underline">
                 yourcontact@gmail.com

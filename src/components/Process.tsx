@@ -12,9 +12,7 @@ export default function Process() {
         <div className="row d-none d-xxl-flex">
           <div className="col">
             <div className="text-start mx-5">
-              <h6 className="p-5 fw-bold bg-primary rounded-circle text-center">
-                01
-              </h6>
+              <h6 className="p-5 fw-bold bg-primary rounded-circle text-center">01</h6>
               <p className="fw-bold text-uppercase">
                 Requirement <br /> analysis
               </p>
@@ -22,9 +20,7 @@ export default function Process() {
           </div>
           <div className="col">
             <div className="text-start mx-5" style={{ marginTop: 100 }}>
-              <h6 className="p-5 fw-bold bg-primary rounded-circle text-center">
-                02
-              </h6>
+              <h6 className="p-5 fw-bold bg-primary rounded-circle text-center">02</h6>
               <p className="fw-bold text-uppercase">
                 Market <br /> research
               </p>
@@ -32,9 +28,7 @@ export default function Process() {
           </div>
           <div className="col">
             <div className="text-start mx-5 mt-5">
-              <h6 className="p-5 fw-bold bg-primary rounded-circle text-center">
-                03
-              </h6>
+              <h6 className="p-5 fw-bold bg-primary rounded-circle text-center">03</h6>
               <p className="fw-bold text-uppercase">
                 Design <br /> Concepts
               </p>
@@ -42,9 +36,7 @@ export default function Process() {
           </div>
           <div className="col">
             <div className="text-start mx-5" style={{ marginTop: 100 }}>
-              <h6 className="p-5 fw-bold bg-primary rounded-circle text-center">
-                04
-              </h6>
+              <h6 className="p-5 fw-bold bg-primary rounded-circle text-center">04</h6>
               <p className="fw-bold text-uppercase">
                 Build <br /> Prototype
               </p>
@@ -52,9 +44,7 @@ export default function Process() {
           </div>
           <div className="col">
             <div className="text-start mx-5">
-              <h6 className="p-5 fw-bold bg-primary rounded-circle text-center">
-                05
-              </h6>
+              <h6 className="p-5 fw-bold bg-primary rounded-circle text-center">05</h6>
               <p className="fw-bold text-uppercase">
                 Launch <br /> product
               </p>

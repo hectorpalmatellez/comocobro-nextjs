@@ -51,23 +51,16 @@
     return 0 > i ? e + i : i;
   }
   function a(t, e) {
-    return Math.round(
-      (/%/.test(t) ? ('x' === e ? E.width() : o()) / 100 : 1) * parseInt(t, 10)
-    );
+    return Math.round((/%/.test(t) ? ('x' === e ? E.width() : o()) / 100 : 1) * parseInt(t, 10));
   }
   function s(t, e) {
     return t.get('photo') || t.get('photoRegex').test(e);
   }
   function l(t, e) {
-    return t.get('retinaUrl') && i.devicePixelRatio > 1
-      ? e.replace(t.get('photoRegex'), t.get('retinaSuffix'))
-      : e;
+    return t.get('retinaUrl') && i.devicePixelRatio > 1 ? e.replace(t.get('photoRegex'), t.get('retinaSuffix')) : e;
   }
   function d(t) {
-    'contains' in x[0] &&
-      !x[0].contains(t.target) &&
-      t.target !== v[0] &&
-      (t.stopPropagation(), x.focus());
+    'contains' in x[0] && !x[0].contains(t.target) && t.target !== v[0] && (t.stopPropagation(), x.focus());
   }
   function c(t) {
     c.str !== t && (x.add(v).removeClass(c.str).addClass(t), (c.str = t));
@@ -94,11 +87,7 @@
         (U = $ = !0),
           c(_.get('className')),
           x.css({ visibility: 'hidden', display: 'block', opacity: '' }),
-          (I = n(
-            se,
-            'LoadedContent',
-            'width:0; height:0; overflow:hidden; visibility:hidden'
-          )),
+          (I = n(se, 'LoadedContent', 'width:0; height:0; overflow:hidden; visibility:hidden')),
           b.css({ width: '', height: '' }).append(I),
           (j = T.height() + k.height() + b.outerHeight(!0) - b.height()),
           (D = C.width() + H.width() + b.outerWidth(!0) - b.width()),
@@ -135,9 +124,7 @@
           visibility: 'visible',
         })
         .show(),
-        _.get('closeButton')
-          ? B.html(_.get('close')).appendTo(b)
-          : B.appendTo('<div/>'),
+        _.get('closeButton') ? B.html(_.get('close')).appendTo(b) : B.appendTo('<div/>'),
         w();
     }
   }
@@ -167,40 +154,19 @@
       (B = t('<button type="button"/>').attr({ id: Z + 'Close' })),
       y
         .append(
-          n(se).append(
-            n(se, 'TopLeft'),
-            (T = n(se, 'TopCenter')),
-            n(se, 'TopRight')
-          ),
-          n(se, !1, 'clear:left').append(
-            (C = n(se, 'MiddleLeft')),
-            b,
-            (H = n(se, 'MiddleRight'))
-          ),
-          n(se, !1, 'clear:left').append(
-            n(se, 'BottomLeft'),
-            (k = n(se, 'BottomCenter')),
-            n(se, 'BottomRight')
-          )
+          n(se).append(n(se, 'TopLeft'), (T = n(se, 'TopCenter')), n(se, 'TopRight')),
+          n(se, !1, 'clear:left').append((C = n(se, 'MiddleLeft')), b, (H = n(se, 'MiddleRight'))),
+          n(se, !1, 'clear:left').append(n(se, 'BottomLeft'), (k = n(se, 'BottomCenter')), n(se, 'BottomRight'))
         )
         .find('div div')
         .css({ float: 'left' }),
-      (M = n(
-        se,
-        !1,
-        'position:absolute; width:9999px; visibility:hidden; display:none; max-width:none;'
-      )),
+      (M = n(se, !1, 'position:absolute; width:9999px; visibility:hidden; display:none; max-width:none;')),
       (O = K.add(P).add(R).add(S))),
       e.body && !x.parent().length && t(e.body).append(v, x.append(y, M));
   }
   function m() {
     function i(t) {
-      t.which > 1 ||
-        t.shiftKey ||
-        t.altKey ||
-        t.metaKey ||
-        t.ctrlKey ||
-        (t.preventDefault(), f(this));
+      t.which > 1 || t.shiftKey || t.altKey || t.metaKey || t.ctrlKey || (t.preventDefault(), f(this));
     }
     return x
       ? (V ||
@@ -224,13 +190,9 @@
                 _.get('arrowKey') &&
                 W[1] &&
                 !t.altKey &&
-                (37 === e
-                  ? (t.preventDefault(), P.click())
-                  : 39 === e && (t.preventDefault(), K.click()));
+                (37 === e ? (t.preventDefault(), P.click()) : 39 === e && (t.preventDefault(), K.click()));
           }),
-          t.isFunction(t.fn.on)
-            ? t(e).on('click.' + Z, '.' + te, i)
-            : t('.' + te).live('click.' + Z, i)),
+          t.isFunction(t.fn.on) ? t(e).on('click.' + Z, '.' + te, i) : t('.' + te).live('click.' + Z, i)),
         !0)
       : !1;
   }
@@ -246,20 +208,12 @@
       u(he),
       u(ie),
       _.get('onLoad'),
-      (_.h = _.get('height')
-        ? a(_.get('height'), 'y') - N - j
-        : _.get('innerHeight') && a(_.get('innerHeight'), 'y')),
-      (_.w = _.get('width')
-        ? a(_.get('width'), 'x') - z - D
-        : _.get('innerWidth') && a(_.get('innerWidth'), 'x')),
+      (_.h = _.get('height') ? a(_.get('height'), 'y') - N - j : _.get('innerHeight') && a(_.get('innerHeight'), 'y')),
+      (_.w = _.get('width') ? a(_.get('width'), 'x') - z - D : _.get('innerWidth') && a(_.get('innerWidth'), 'x')),
       (_.mw = _.w),
       (_.mh = _.h),
-      _.get('maxWidth') &&
-        ((_.mw = a(_.get('maxWidth'), 'x') - z - D),
-        (_.mw = _.w && _.w < _.mw ? _.w : _.mw)),
-      _.get('maxHeight') &&
-        ((_.mh = a(_.get('maxHeight'), 'y') - N - j),
-        (_.mh = _.h && _.h < _.mh ? _.h : _.mh)),
+      _.get('maxWidth') && ((_.mw = a(_.get('maxWidth'), 'x') - z - D), (_.mw = _.w && _.w < _.mw ? _.w : _.mw)),
+      _.get('maxHeight') && ((_.mh = a(_.get('maxHeight'), 'y') - N - j), (_.mh = _.h && _.h < _.mh ? _.h : _.mh)),
       (e = _.get('href')),
       (Q = setTimeout(function () {
         L.show();
@@ -291,22 +245,14 @@
                       var e;
                       _.get('retinaImage') &&
                         i.devicePixelRatio > 1 &&
-                        ((q.height = q.height / i.devicePixelRatio),
-                        (q.width = q.width / i.devicePixelRatio)),
+                        ((q.height = q.height / i.devicePixelRatio), (q.width = q.width / i.devicePixelRatio)),
                         _.get('scalePhotos') &&
                           ((o = function () {
-                            (q.height -= q.height * e),
-                              (q.width -= q.width * e);
+                            (q.height -= q.height * e), (q.width -= q.width * e);
                           }),
-                          _.mw &&
-                            q.width > _.mw &&
-                            ((e = (q.width - _.mw) / q.width), o()),
-                          _.mh &&
-                            q.height > _.mh &&
-                            ((e = (q.height - _.mh) / q.height), o())),
-                        _.h &&
-                          (q.style.marginTop =
-                            Math.max(_.mh - q.height, 0) / 2 + 'px'),
+                          _.mw && q.width > _.mw && ((e = (q.width - _.mw) / q.width), o()),
+                          _.mh && q.height > _.mh && ((e = (q.height - _.mh) / q.height), o())),
+                        _.h && (q.style.marginTop = Math.max(_.mh - q.height, 0) / 2 + 'px'),
                         W[1] &&
                           (_.get('loop') || W[A + 1]) &&
                           ((q.style.cursor = 'pointer'),
@@ -321,12 +267,7 @@
               (q.src = e))
             : e &&
               M.load(e, _.get('data'), function (e, i) {
-                d === le &&
-                  h(
-                    'error' === i
-                      ? n(se, 'Error').html(_.get('xhrError'))
-                      : t(this).contents()
-                  );
+                d === le && h('error' === i ? n(se, 'Error').html(_.get('xhrError')) : t(this).contents());
               });
   }
   var v,
@@ -473,8 +414,7 @@
         clearTimeout(h);
       }
       function e() {
-        (_.get('loop') || W[A + 1]) &&
-          (t(), (h = setTimeout(J.next, _.get('slideshowSpeed'))));
+        (_.get('loop') || W[A + 1]) && (t(), (h = setTimeout(J.next, _.get('slideshowSpeed'))));
       }
       function i() {
         S.html(_.get('slideshowStop')).unbind(s).one(s, n),
@@ -492,11 +432,7 @@
           x.removeClass(a + 'on').addClass(a + 'off');
       }
       function o() {
-        (r = !1),
-          S.hide(),
-          t(),
-          ae.unbind(ne, e).unbind(ie, t),
-          x.removeClass(a + 'off ' + a + 'on');
+        (r = !1), S.hide(), t(), ae.unbind(ne, e).unbind(ie, t), x.removeClass(a + 'off ' + a + 'on');
       }
       var r,
         h,
@@ -505,12 +441,7 @@
       return function () {
         r
           ? _.get('slideshow') || (ae.unbind(oe, o), o())
-          : _.get('slideshow') &&
-            W[1] &&
-            ((r = !0),
-            ae.one(oe, o),
-            _.get('slideshowAuto') ? i() : n(),
-            S.show());
+          : _.get('slideshow') && W[1] && ((r = !0), ae.one(oe, o), _.get('slideshowAuto') ? i() : n(), S.show());
       };
     })();
   t[Y] ||
@@ -542,14 +473,8 @@
         }),
     (J.position = function (e, i) {
       function n() {
-        (T[0].style.width =
-          k[0].style.width =
-          b[0].style.width =
-            parseInt(x[0].style.width, 10) - D + 'px'),
-          (b[0].style.height =
-            C[0].style.height =
-            H[0].style.height =
-              parseInt(x[0].style.height, 10) - j + 'px');
+        (T[0].style.width = k[0].style.width = b[0].style.width = parseInt(x[0].style.width, 10) - D + 'px'),
+          (b[0].style.height = C[0].style.height = H[0].style.height = parseInt(x[0].style.height, 10) - j + 'px');
       }
       var r,
         h,
@@ -615,25 +540,17 @@
         I.css({ width: _.w }),
         t.height && (_.h = a(t.height, 'y') - N - j),
         t.innerHeight && (_.h = a(t.innerHeight, 'y')),
-        t.innerHeight ||
-          t.height ||
-          ((e = I.scrollTop()), I.css({ height: 'auto' }), (_.h = I.height())),
+        t.innerHeight || t.height || ((e = I.scrollTop()), I.css({ height: 'auto' }), (_.h = I.height())),
         I.css({ height: _.h }),
         e && I.scrollTop(e),
         J.position('none' === _.get('transition') ? 0 : _.get('speed')));
     }),
     (J.prep = function (i) {
       function o() {
-        return (
-          (_.w = _.w || I.width()), (_.w = _.mw && _.mw < _.w ? _.mw : _.w), _.w
-        );
+        return (_.w = _.w || I.width()), (_.w = _.mw && _.mw < _.w ? _.mw : _.w), _.w;
       }
       function a() {
-        return (
-          (_.h = _.h || I.height()),
-          (_.h = _.mh && _.mh < _.h ? _.mh : _.h),
-          _.h
-        );
+        return (_.h = _.h || I.height()), (_.h = _.mh && _.mh < _.h ? _.mh : _.h), _.h;
       }
       if (U) {
         var d,
@@ -671,12 +588,8 @@
                         .replace('{current}', A + 1)
                         .replace('{total}', a)
                     ).show(),
-                  K[_.get('loop') || a - 1 > A ? 'show' : 'hide']().html(
-                    _.get('next')
-                  ),
-                  P[_.get('loop') || A ? 'show' : 'hide']().html(
-                    _.get('previous')
-                  ),
+                  K[_.get('loop') || a - 1 > A ? 'show' : 'hide']().html(_.get('next')),
+                  P[_.get('loop') || A ? 'show' : 'hide']().html(_.get('previous')),
                   ce(),
                   _.get('preloading') &&
                     t.each([h(-1), h(1)], function () {
@@ -684,11 +597,7 @@
                         n = W[this],
                         o = new r(n, t.data(n, Y)),
                         h = o.get('href');
-                      h &&
-                        s(o, h) &&
-                        ((h = l(o, h)),
-                        (i = e.createElement('img')),
-                        (i.src = h));
+                      h && s(o, h) && ((h = l(o, h)), (i = e.createElement('img')), (i.src = h));
                     }))
                 : O.hide(),
               _.get('iframe')
@@ -785,9 +694,7 @@ var $jscomp$this = this;
   function w(a) {
     if (g.arr(a)) return a;
     g.str(a) && (a = v(a) || a);
-    return a instanceof NodeList || a instanceof HTMLCollection
-      ? [].slice.call(a)
-      : [a];
+    return a instanceof NodeList || a instanceof HTMLCollection ? [].slice.call(a) : [a];
   }
   function F(a, b) {
     return a.some(function (a) {
@@ -826,13 +733,7 @@ var $jscomp$this = this;
     function b(a, b, c) {
       0 > c && (c += 1);
       1 < c && --c;
-      return c < 1 / 6
-        ? a + 6 * (b - a) * c
-        : 0.5 > c
-          ? b
-          : c < 2 / 3
-            ? a + (b - a) * (2 / 3 - c) * 6
-            : a;
+      return c < 1 / 6 ? a + 6 * (b - a) * c : 0.5 > c ? b : c < 2 / 3 ? a + (b - a) * (2 / 3 - c) * 6 : a;
     }
     var d = /hsl\((\d+),\s*([\d.]+)%,\s*([\d.]+)%\)/g.exec(a);
     a = parseInt(d[1]) / 360;
@@ -849,13 +750,7 @@ var $jscomp$this = this;
     return 'rgb(' + 255 * c + ',' + 255 * d + ',' + 255 * a + ')';
   }
   function x(a) {
-    if (
-      (a =
-        /([\+\-]?[0-9#\.]+)(%|px|pt|em|rem|in|cm|mm|ex|pc|vw|vh|deg|rad|turn)?/.exec(
-          a
-        ))
-    )
-      return a[2];
+    if ((a = /([\+\-]?[0-9#\.]+)(%|px|pt|em|rem|in|cm|mm|ex|pc|vw|vh|deg|rad|turn)?/.exec(a))) return a[2];
   }
   function U(a) {
     if (-1 < a.indexOf('translate')) return 'px';
@@ -866,16 +761,11 @@ var $jscomp$this = this;
   }
   function C(a, b) {
     if (b in a.style)
-      return (
-        getComputedStyle(a).getPropertyValue(
-          b.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
-        ) || '0'
-      );
+      return getComputedStyle(a).getPropertyValue(b.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()) || '0';
   }
   function I(a, b) {
     if (g.dom(a) && F(V, b)) return 'transform';
-    if (g.dom(a) && (a.getAttribute(b) || (g.svg(a) && a[b])))
-      return 'attribute';
+    if (g.dom(a) && (a.getAttribute(b) || (g.svg(a) && a[b]))) return 'attribute';
     if (g.dom(a) && 'transform' !== b && C(a, b)) return 'css';
     if (null != a[b]) return 'object';
   }
@@ -884,8 +774,7 @@ var $jscomp$this = this;
       d = -1 < b.indexOf('scale') ? 1 : 0 + d;
     a = a.style.transform;
     if (!a) return d;
-    for (var c = [], e = [], l = [], h = /(\w+)\((.+?)\)/g; (c = h.exec(a)); )
-      e.push(c[1]), l.push(c[2]);
+    for (var c = [], e = [], l = [], h = /(\w+)\((.+?)\)/g; (c = h.exec(a)); ) e.push(c[1]), l.push(c[2]);
     a = l.filter(function (a, c) {
       return e[c] === b;
     });
@@ -972,9 +861,7 @@ var $jscomp$this = this;
     var d = A(b);
     if (g.arr(a)) {
       var c = a.length;
-      2 !== c || g.obj(a[0])
-        ? g.fnc(b.duration) || (d.duration = b.duration / c)
-        : (a = { value: a });
+      2 !== c || g.obj(a[0]) ? g.fnc(b.duration) || (d.duration = b.duration / c) : (a = { value: a });
     }
     return w(a)
       .map(function (a, c) {
@@ -1068,10 +955,7 @@ var $jscomp$this = this;
       e = [],
       g = B(b, d),
       h;
-    for (h in a)
-      g.hasOwnProperty(h) ||
-        'targets' === h ||
-        e.push({ name: h, offset: g.offset, tweens: aa(a[h], d) });
+    for (h in a) g.hasOwnProperty(h) || 'targets' === h || e.push({ name: h, offset: g.offset, tweens: aa(a[h], d) });
     a = ea(c, e);
     return B(b, {
       children: [],
@@ -1105,10 +989,7 @@ var $jscomp$this = this;
         e.isPath$1 = e.tween.isPath;
         e.round = e.tween.round;
         e.eased = e.tween.easing(
-          Math.min(
-            Math.max(a - e.tween.start - e.tween.delay, 0),
-            e.tween.duration
-          ) / e.tween.duration,
+          Math.min(Math.max(a - e.tween.start - e.tween.delay, 0), e.tween.duration) / e.tween.duration,
           e.tween.elasticity
         );
         m = Y(
@@ -1137,10 +1018,7 @@ var $jscomp$this = this;
       }
       if (c)
         for (var k in c)
-          E ||
-            (E = C(document.body, 'transform')
-              ? 'transform'
-              : '-webkit-transform'),
+          E || (E = C(document.body, 'transform') ? 'transform' : '-webkit-transform'),
             (f.animatables[k].target.style[E] = c[k].join(' '));
       f.currentTime = a;
       f.progress = (a / f.duration) * 100;
@@ -1166,14 +1044,11 @@ var $jscomp$this = this;
       }
       r > l && r < h
         ? (c(r), !f.began && r >= n && ((f.began = !0), e('begin')), e('run'))
-        : (r <= l && 0 !== P && (c(0), q && g()),
-          r >= h && P !== h && (c(h), q || g()));
+        : (r <= l && 0 !== P && (c(0), q && g()), r >= h && P !== h && (c(h), q || g()));
       a >= h &&
         (f.remaining
           ? ((t = m), 'alternate' === f.direction && (f.reversed = !f.reversed))
-          : (f.pause(),
-            'Promise' in window && (Q(), (R = b())),
-            f.completed || ((f.completed = !0), e('complete'))),
+          : (f.pause(), 'Promise' in window && (Q(), (R = b())), f.completed || ((f.completed = !0), e('complete'))),
         (k = 0));
       e('update');
     }
@@ -1194,8 +1069,7 @@ var $jscomp$this = this;
       f.completed = !1;
       f.reversed = 'reverse' === a;
       f.remaining = 'alternate' === a && 1 === b ? 2 : b;
-      for (a = f.children.length; a--; )
-        (b = f.children[a]), b.seek(b.offset), b.reset();
+      for (a = f.children.length; a--; ) (b = f.children[a]), b.seek(b.offset), b.reset();
     };
     f.tick = function (a) {
       m = a;
@@ -1211,12 +1085,7 @@ var $jscomp$this = this;
       f.paused = !0;
     };
     f.play = function () {
-      f.paused &&
-        ((f.paused = !1),
-        (t = 0),
-        (k = d(f.currentTime)),
-        q.push(f),
-        z || ja());
+      f.paused && ((f.paused = !1), (t = 0), (k = d(f.currentTime)), q.push(f), z || ja());
     };
     f.reverse = function () {
       f.reversed = !f.reversed;
@@ -1250,10 +1119,9 @@ var $jscomp$this = this;
       elasticity: 500,
       round: 0,
     },
-    V =
-      'translateX translateY translateZ rotate rotateX rotateY rotateZ scale scaleX scaleY scaleZ skewX skewY'.split(
-        ' '
-      ),
+    V = 'translateX translateY translateZ rotate rotateX rotateY rotateZ scale scaleX scaleY scaleZ skewX skewY'.split(
+      ' '
+    ),
     E,
     g = {
       arr: function (a) {
@@ -1297,8 +1165,7 @@ var $jscomp$this = this;
       return function (b, d, c, e) {
         if (0 <= b && 1 >= b && 0 <= c && 1 >= c) {
           var g = new Float32Array(11);
-          if (b !== d || c !== e)
-            for (var h = 0; 11 > h; ++h) g[h] = a(0.1 * h, b, c);
+          if (b !== d || c !== e) for (var h = 0; 11 > h; ++h) g[h] = a(0.1 * h, b, c);
           return function (h) {
             if (b === d && c === e) return h;
             if (0 === h) return 0;
@@ -1306,16 +1173,10 @@ var $jscomp$this = this;
             for (var m = 0, k = 1; 10 !== k && g[k] <= h; ++k) m += 0.1;
             --k;
             var k = m + ((h - g[k]) / (g[k + 1] - g[k])) * 0.1,
-              l =
-                3 * (1 - 3 * c + 3 * b) * k * k +
-                2 * (3 * c - 6 * b) * k +
-                3 * b;
+              l = 3 * (1 - 3 * c + 3 * b) * k * k + 2 * (3 * c - 6 * b) * k + 3 * b;
             if (0.001 <= l) {
               for (m = 0; 4 > m; ++m) {
-                l =
-                  3 * (1 - 3 * c + 3 * b) * k * k +
-                  2 * (3 * c - 6 * b) * k +
-                  3 * b;
+                l = 3 * (1 - 3 * c + 3 * b) * k * k + 2 * (3 * c - 6 * b) * k + 3 * b;
                 if (0 === l) break;
                 var n = a(k, b, c) - h,
                   k = k - n / l;
@@ -1326,10 +1187,7 @@ var $jscomp$this = this;
               var k = m,
                 m = m + 0.1,
                 f = 0;
-              do
-                (n = k + (m - k) / 2),
-                  (l = a(n, b, c) - h),
-                  0 < l ? (m = n) : (k = n);
+              do (n = k + (m - k) / 2), (l = a(n, b, c) - h), 0 < l ? (m = n) : (k = n);
               while (1e-7 < Math.abs(l) && 10 > ++f);
               h = n;
             }
@@ -1342,10 +1200,7 @@ var $jscomp$this = this;
       function a(a, b) {
         return 0 === a || 1 === a
           ? a
-          : -Math.pow(2, 10 * (a - 1)) *
-              Math.sin(
-                (2 * (a - 1 - (b / (2 * Math.PI)) * Math.asin(1)) * Math.PI) / b
-              );
+          : -Math.pow(2, 10 * (a - 1)) * Math.sin((2 * (a - 1 - (b / (2 * Math.PI)) * Math.asin(1)) * Math.PI) / b);
       }
       var b = 'Quad Cubic Quart Quint Sine Expo Circ Back Elastic'.split(' '),
         d = {
@@ -1395,9 +1250,7 @@ var $jscomp$this = this;
           d[e.type].forEach(
             (function (a) {
               return function (d, e) {
-                c['ease' + a.type + b[e]] = g.fnc(d)
-                  ? d
-                  : y.apply($jscomp$this, d);
+                c['ease' + a.type + b[e]] = g.fnc(d) ? d : y.apply($jscomp$this, d);
               };
             })(e)
           ),
@@ -1505,9 +1358,7 @@ var $jscomp$this = this;
     ? (module.exports = t())
     : 'function' == typeof define && define.amd
       ? define(t)
-      : ((e =
-          'undefined' != typeof globalThis ? globalThis : e || self).jarallax =
-          t());
+      : ((e = 'undefined' != typeof globalThis ? globalThis : e || self).jarallax = t());
 })(this, function () {
   'use strict';
   function e(e) {
@@ -1530,22 +1381,16 @@ var $jscomp$this = this;
           : {};
   var i = t;
   const { navigator: o } = i,
-    n = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      o.userAgent
-    );
+    n = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(o.userAgent);
   let a, s;
   function l() {
     n
       ? (!a &&
           document.body &&
           ((a = document.createElement('div')),
-          (a.style.cssText =
-            'position: fixed; top: -9999px; left: 0; height: 100vh; width: 0;'),
+          (a.style.cssText = 'position: fixed; top: -9999px; left: 0; height: 100vh; width: 0;'),
           document.body.appendChild(a)),
-        (s =
-          (a ? a.clientHeight : 0) ||
-          i.innerHeight ||
-          document.documentElement.clientHeight))
+        (s = (a ? a.clientHeight : 0) || i.innerHeight || document.documentElement.clientHeight))
       : (s = i.innerHeight || document.documentElement.clientHeight);
   }
   l(),
@@ -1569,12 +1414,7 @@ var $jscomp$this = this;
             wndW: i.innerWidth,
             wndH: s,
           },
-          m =
-            !n ||
-            n.wndW !== l.wndW ||
-            n.wndH !== l.wndH ||
-            n.width !== l.width ||
-            n.height !== l.height,
+          m = !n || n.wndW !== l.wndW || n.wndH !== l.wndH || n.width !== l.width || n.height !== l.height,
           c = m || !n || n.top !== l.top || n.bottom !== l.bottom;
         (r[t].oldData = l), m && o.onResize(), c && o.onScroll();
       }),
@@ -1622,14 +1462,9 @@ var $jscomp$this = this;
         (i.options = i.extend({}, i.defaults, a, t)),
         (i.pureOptions = i.extend({}, i.options)),
         Object.keys(i.options).forEach((e) => {
-          'true' === i.options[e]
-            ? (i.options[e] = !0)
-            : 'false' === i.options[e] && (i.options[e] = !1);
+          'true' === i.options[e] ? (i.options[e] = !0) : 'false' === i.options[e] && (i.options[e] = !1);
         }),
-        (i.options.speed = Math.min(
-          2,
-          Math.max(-1, parseFloat(i.options.speed))
-        )),
+        (i.options.speed = Math.min(2, Math.max(-1, parseFloat(i.options.speed)))),
         'string' == typeof i.options.disableParallax &&
           (i.options.disableParallax = new RegExp(i.options.disableParallax)),
         i.options.disableParallax instanceof RegExp)
@@ -1638,17 +1473,14 @@ var $jscomp$this = this;
         i.options.disableParallax = () => e.test(o.userAgent);
       }
       if (
-        ('function' != typeof i.options.disableParallax &&
-          (i.options.disableParallax = () => !1),
-        'string' == typeof i.options.disableVideo &&
-          (i.options.disableVideo = new RegExp(i.options.disableVideo)),
+        ('function' != typeof i.options.disableParallax && (i.options.disableParallax = () => !1),
+        'string' == typeof i.options.disableVideo && (i.options.disableVideo = new RegExp(i.options.disableVideo)),
         i.options.disableVideo instanceof RegExp)
       ) {
         const e = i.options.disableVideo;
         i.options.disableVideo = () => e.test(o.userAgent);
       }
-      'function' != typeof i.options.disableVideo &&
-        (i.options.disableVideo = () => !1);
+      'function' != typeof i.options.disableVideo && (i.options.disableVideo = () => !1);
       let s = i.options.elementInViewport;
       s && 'object' == typeof s && void 0 !== s.length && ([s] = s),
         s instanceof Element || (s = null),
@@ -1693,10 +1525,7 @@ var $jscomp$this = this;
       let t = e.options.imgElement;
       return (
         t && 'string' == typeof t && (t = e.$item.querySelector(t)),
-        t instanceof Element ||
-          (e.options.imgSrc
-            ? ((t = new Image()), (t.src = e.options.imgSrc))
-            : (t = null)),
+        t instanceof Element || (e.options.imgSrc ? ((t = new Image()), (t.src = e.options.imgSrc)) : (t = null)),
         t &&
           (e.options.keepImg
             ? (e.image.$item = t.cloneNode(!0))
@@ -1704,8 +1533,7 @@ var $jscomp$this = this;
           (e.image.useImgTag = !0)),
         !!e.image.$item ||
           (null === e.image.src &&
-            ((e.image.src =
-              'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'),
+            ((e.image.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'),
             (e.image.bgImage = e.css(e.$item, 'background-image'))),
           !(!e.image.bgImage || 'none' === e.image.bgImage))
       );
@@ -1731,17 +1559,13 @@ var $jscomp$this = this;
       };
       if (!e.options.keepImg) {
         const t = e.$item.getAttribute('style');
-        if (
-          (t && e.$item.setAttribute('data-jarallax-original-styles', t),
-          e.image.useImgTag)
-        ) {
+        if ((t && e.$item.setAttribute('data-jarallax-original-styles', t), e.image.useImgTag)) {
           const t = e.image.$item.getAttribute('style');
           t && e.image.$item.setAttribute('data-jarallax-original-styles', t);
         }
       }
       if (
-        ('static' === e.css(e.$item, 'position') &&
-          e.css(e.$item, { position: 'relative' }),
+        ('static' === e.css(e.$item, 'position') && e.css(e.$item, { position: 'relative' }),
         'auto' === e.css(e.$item, 'z-index') && e.css(e.$item, { zIndex: 0 }),
         (e.image.$container = document.createElement('div')),
         e.css(e.image.$container, t),
@@ -1751,10 +1575,7 @@ var $jscomp$this = this;
             '-webkit-clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
             'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
           }),
-        e.image.$container.setAttribute(
-          'id',
-          `jarallax-container-${e.instanceID}`
-        ),
+        e.image.$container.setAttribute('id', `jarallax-container-${e.instanceID}`),
         e.$item.appendChild(e.image.$container),
         e.image.useImgTag
           ? (o = e.extend(
@@ -1773,8 +1594,7 @@ var $jscomp$this = this;
                   'background-position': e.options.imgPosition,
                   'background-size': e.options.imgSize,
                   'background-repeat': e.options.imgRepeat,
-                  'background-image':
-                    e.image.bgImage || `url("${e.image.src}")`,
+                  'background-image': e.image.bgImage || `url("${e.image.src}")`,
                 },
                 t,
                 o
@@ -1788,16 +1608,12 @@ var $jscomp$this = this;
       ) {
         const t = (function (e) {
           const t = [];
-          for (; null !== e.parentElement; )
-            1 === (e = e.parentElement).nodeType && t.push(e);
+          for (; null !== e.parentElement; ) 1 === (e = e.parentElement).nodeType && t.push(e);
           return t;
         })(e.$item).filter((e) => {
           const t = i.getComputedStyle(e),
             o = t['-webkit-transform'] || t['-moz-transform'] || t.transform;
-          return (
-            (o && 'none' !== o) ||
-            /(auto|scroll)/.test(t.overflow + t['overflow-y'] + t['overflow-x'])
-          );
+          return (o && 'none' !== o) || /(auto|scroll)/.test(t.overflow + t['overflow-y'] + t['overflow-x']);
         });
         e.image.position = t.length ? 'absolute' : 'fixed';
       }
@@ -1807,8 +1623,7 @@ var $jscomp$this = this;
         e.onResize(),
         e.onScroll(!0),
         e.options.onInit && e.options.onInit.call(e),
-        'none' !== e.css(e.$item, 'background-image') &&
-          e.css(e.$item, { 'background-image': 'none' }),
+        'none' !== e.css(e.$item, 'background-image') && e.css(e.$item, { 'background-image': 'none' }),
         e.addToParallaxList();
     }
     addToParallaxList() {
@@ -1831,13 +1646,10 @@ var $jscomp$this = this;
       ) {
         const i = e.image.$item.getAttribute('data-jarallax-original-styles');
         e.image.$item.removeAttribute('data-jarallax-original-styles'),
-          i
-            ? e.image.$item.setAttribute('style', t)
-            : e.image.$item.removeAttribute('style'),
+          i ? e.image.$item.setAttribute('style', t) : e.image.$item.removeAttribute('style'),
           e.image.$itemParent && e.image.$itemParent.appendChild(e.image.$item);
       }
-      e.image.$container &&
-        e.image.$container.parentNode.removeChild(e.image.$container),
+      e.image.$container && e.image.$container.parentNode.removeChild(e.image.$container),
         e.options.onDestroy && e.options.onDestroy.call(e),
         delete e.$item.jarallax;
     }
@@ -1853,14 +1665,8 @@ var $jscomp$this = this;
         r = 0;
       return (
         n &&
-          (0 > o
-            ? ((a = o * Math.max(i, s)), s < i && (a -= o * (i - s)))
-            : (a = o * (i + s)),
-          1 < o
-            ? (l = Math.abs(a - s))
-            : 0 > o
-              ? (l = a / o + Math.abs(a))
-              : (l += (s - i) * (1 - o)),
+          (0 > o ? ((a = o * Math.max(i, s)), s < i && (a -= o * (i - s))) : (a = o * (i + s)),
+          1 < o ? (l = Math.abs(a - s)) : 0 > o ? (l = a / o + Math.abs(a)) : (l += (s - i) * (1 - o)),
           (a /= 2)),
         (e.parallaxScrollDistance = a),
         (r = n ? (s - l) / 2 : (i - l) / 2),
@@ -1885,13 +1691,8 @@ var $jscomp$this = this;
         l = {};
       let r = o;
       if (
-        (t.options.elementInViewport &&
-          (r = t.options.elementInViewport.getBoundingClientRect()),
-        (t.isElementInViewport =
-          0 <= r.bottom &&
-          0 <= r.right &&
-          r.top <= s &&
-          r.left <= i.innerWidth),
+        (t.options.elementInViewport && (r = t.options.elementInViewport.getBoundingClientRect()),
+        (t.isElementInViewport = 0 <= r.bottom && 0 <= r.right && r.top <= s && r.left <= i.innerWidth),
         !e && !t.isElementInViewport)
       )
         return;
@@ -1904,27 +1705,18 @@ var $jscomp$this = this;
         f = 1 - ((s - n) / (s + a)) * 2;
       let h = 1;
       if (
-        (a < s
-          ? (h = 1 - (p || d) / a)
-          : c <= s
-            ? (h = c / s)
-            : g <= s && (h = g / s),
-        ('opacity' !== t.options.type &&
-          'scale-opacity' !== t.options.type &&
-          'scroll-opacity' !== t.options.type) ||
+        (a < s ? (h = 1 - (p || d) / a) : c <= s ? (h = c / s) : g <= s && (h = g / s),
+        ('opacity' !== t.options.type && 'scale-opacity' !== t.options.type && 'scroll-opacity' !== t.options.type) ||
           ((l.transform = 'translate3d(0,0,0)'), (l.opacity = h)),
         'scale' === t.options.type || 'scale-opacity' === t.options.type)
       ) {
         let e = 1;
-        0 > t.options.speed
-          ? (e -= t.options.speed * h)
-          : (e += t.options.speed * (1 - h)),
+        0 > t.options.speed ? (e -= t.options.speed * h) : (e += t.options.speed * (1 - h)),
           (l.transform = `scale(${e}) translate3d(0,0,0)`);
       }
       if ('scroll' === t.options.type || 'scroll-opacity' === t.options.type) {
         let e = t.parallaxScrollDistance * f;
-        'absolute' === t.image.position && (e -= n),
-          (l.transform = `translate3d(0,${e}px,0)`);
+        'absolute' === t.image.position && (e -= n), (l.transform = `translate3d(0,${e}px,0)`);
       }
       t.css(t.image.$item, l),
         t.options.onScroll &&
@@ -1947,11 +1739,7 @@ var $jscomp$this = this;
   const d = function (e, t, ...i) {
     ('object' == typeof HTMLElement
       ? e instanceof HTMLElement
-      : e &&
-        'object' == typeof e &&
-        null !== e &&
-        1 === e.nodeType &&
-        'string' == typeof e.nodeName) && (e = [e]);
+      : e && 'object' == typeof e && null !== e && 1 === e.nodeType && 'string' == typeof e.nodeName) && (e = [e]);
     const o = e.length;
     let n,
       a = 0;
@@ -2127,8 +1915,7 @@ var $jscomp$this = this;
           'chocolat-zooming-in',
           'chocolat-zooming-out',
         ]),
-        NodeList.prototype.isPrototypeOf(e) ||
-        HTMLCollection.prototype.isPrototypeOf(e)
+        NodeList.prototype.isPrototypeOf(e) || HTMLCollection.prototype.isPrototypeOf(e)
           ? e.forEach((e, t) => {
               this.images.push({
                 title: e.getAttribute('title'),
@@ -2142,8 +1929,7 @@ var $jscomp$this = this;
                 });
             })
           : (this.images = e),
-        this.settings.container instanceof Element ||
-        this.settings.container instanceof HTMLElement
+        this.settings.container instanceof Element || this.settings.container instanceof HTMLElement
           ? (this.elems.container = this.settings.container)
           : (this.elems.container = document.body),
         (this.api = {
@@ -2176,8 +1962,7 @@ var $jscomp$this = this;
         (this.state.visible ||
           ((this.state.visible = !0),
           setTimeout(() => {
-            this.elems.overlay.classList.add('chocolat-visible'),
-              this.elems.wrapper.classList.add('chocolat-visible');
+            this.elems.overlay.classList.add('chocolat-visible'), this.elems.wrapper.classList.add('chocolat-visible');
           }, 0),
           this.elems.container.classList.add('chocolat-open')),
         this.settings.fullScreen && l(this.elems.wrapper),
@@ -2202,25 +1987,16 @@ var $jscomp$this = this;
           return (
             null != this.images[t] && s(this.images[t]),
             (this.settings.currentImageIndex = e),
-            (this.elems.description.textContent =
-              this.settings.description.call(this)),
-            (this.elems.pagination.textContent =
-              this.settings.pagination.call(this)),
+            (this.elems.description.textContent = this.settings.description.call(this)),
+            (this.elems.pagination.textContent = this.settings.pagination.call(this)),
             this.arrows(),
             this.position(n).then(
-              () => (
-                this.elems.loader.classList.remove('chocolat-visible'),
-                clearTimeout(a),
-                this.appear(n)
-              )
+              () => (this.elems.loader.classList.remove('chocolat-visible'), clearTimeout(a), this.appear(n))
             )
           );
         })
         .then(() => {
-          this.elems.container.classList.toggle(
-            'chocolat-zoomable',
-            this.zoomable(n, this.elems.wrapper)
-          ),
+          this.elems.container.classList.toggle('chocolat-zoomable', this.zoomable(n, this.elems.wrapper)),
             this.settings.afterImageLoad.call(this);
         });
     }
@@ -2267,8 +2043,7 @@ var $jscomp$this = this;
     }
     arrows() {
       this.settings.loop
-        ? (this.elems.left.classList.add('active'),
-          this.elems.right.classList.add('active'))
+        ? (this.elems.left.classList.add('active'), this.elems.right.classList.add('active'))
         : this.settings.linkImages
           ? (this.elems.right.classList.toggle(
               'active',
@@ -2278,8 +2053,7 @@ var $jscomp$this = this;
               'active',
               this.settings.currentImageIndex !== this.settings.firstImageIndex
             ))
-          : (this.elems.left.classList.remove('active'),
-            this.elems.right.classList.remove('active'));
+          : (this.elems.left.classList.remove('active'), this.elems.right.classList.remove('active'));
     }
     close() {
       if (this.state.fullScreenOpen) return void n();
@@ -2291,8 +2065,7 @@ var $jscomp$this = this;
           this.elems.wrapper.classList.remove('chocolat-visible');
         }, this.elems.wrapper);
       return Promise.all([e, s]).then(() => {
-        this.elems.container.classList.remove('chocolat-open'),
-          this.settings.afterClose.call(this);
+        this.elems.container.classList.remove('chocolat-open'), this.settings.afterClose.call(this);
       });
     }
     destroy() {
@@ -2309,19 +2082,11 @@ var $jscomp$this = this;
         this.elems.wrapper.parentNode.removeChild(this.elems.wrapper));
     }
     markup() {
-      this.elems.container.classList.add(
-        'chocolat-open',
-        this.settings.className
-      ),
-        'cover' == this.settings.imageSize &&
-          this.elems.container.classList.add('chocolat-cover'),
-        this.elems.container !== document.body &&
-          this.elems.container.classList.add('chocolat-in-container'),
+      this.elems.container.classList.add('chocolat-open', this.settings.className),
+        'cover' == this.settings.imageSize && this.elems.container.classList.add('chocolat-cover'),
+        this.elems.container !== document.body && this.elems.container.classList.add('chocolat-in-container'),
         (this.elems.wrapper = document.createElement('div')),
-        this.elems.wrapper.setAttribute(
-          'id',
-          'chocolat-content-' + this.settings.setIndex
-        ),
+        this.elems.wrapper.setAttribute('id', 'chocolat-content-' + this.settings.setIndex),
         this.elems.wrapper.setAttribute('class', 'chocolat-wrapper'),
         this.elems.container.appendChild(this.elems.wrapper),
         (this.elems.overlay = document.createElement('div')),
@@ -2379,11 +2144,7 @@ var $jscomp$this = this;
       this.off(document, 'keydown.chocolat'),
         this.on(document, 'keydown.chocolat', (e) => {
           this.state.initialized &&
-            (37 == e.keyCode
-              ? this.change(-1)
-              : 39 == e.keyCode
-                ? this.change(1)
-                : 27 == e.keyCode && this.close());
+            (37 == e.keyCode ? this.change(-1) : 39 == e.keyCode ? this.change(1) : 27 == e.keyCode && this.close());
         });
       const t = this.elems.wrapper.querySelector('.chocolat-right');
       this.off(t, 'click.chocolat'),
@@ -2403,17 +2164,13 @@ var $jscomp$this = this;
         }),
         this.off(document, 'fullscreenchange.chocolat'),
         this.on(document, 'fullscreenchange.chocolat', () => {
-          document.fullscreenElement ||
-          document.webkitCurrentFullScreenElement ||
-          document.webkitFullscreenElement
+          document.fullscreenElement || document.webkitCurrentFullScreenElement || document.webkitFullscreenElement
             ? (this.state.fullScreenOpen = !0)
             : (this.state.fullScreenOpen = !1);
         }),
         this.off(document, 'webkitfullscreenchange.chocolat'),
         this.on(document, 'webkitfullscreenchange.chocolat', () => {
-          document.fullscreenElement ||
-          document.webkitCurrentFullScreenElement ||
-          document.webkitFullscreenElement
+          document.fullscreenElement || document.webkitCurrentFullScreenElement || document.webkitFullscreenElement
             ? (this.state.fullScreenOpen = !0)
             : (this.state.fullScreenOpen = !1);
         }),
@@ -2442,8 +2199,7 @@ var $jscomp$this = this;
             }));
         }),
         this.on(this.elems.wrapper, 'mousemove.chocolat', (e) => {
-          if (null === this.state.initialZoomState || !this.state.visible)
-            return;
+          if (null === this.state.initialZoomState || !this.state.visible) return;
           const t = this.elems.wrapper.getBoundingClientRect(),
             s = t.top + window.scrollY,
             i = t.left + window.scrollX,
@@ -2462,8 +2218,7 @@ var $jscomp$this = this;
             const e = this.settings.zoomedPaddingY(o, l);
             (r = c[1] / (l / 2)), (r *= (o - l) / 2 + e);
           }
-          (this.elems.img.style.marginLeft = -h + 'px'),
-            (this.elems.img.style.marginTop = -r + 'px');
+          (this.elems.img.style.marginLeft = -h + 'px'), (this.elems.img.style.marginTop = -r + 'px');
         }),
         this.on(window, 'resize.chocolat', (t) => {
           this.state.initialized &&
@@ -2496,10 +2251,7 @@ var $jscomp$this = this;
     zoomable(e, t) {
       const s = t.clientWidth,
         i = t.clientHeight,
-        l = !(
-          !this.settings.allowZoom ||
-          !(e.naturalWidth > s || e.naturalHeight > i)
-        ),
+        l = !(!this.settings.allowZoom || !(e.naturalWidth > s || e.naturalHeight > i)),
         n = e.clientWidth > e.naturalWidth || e.clientHeight > e.naturalHeight;
       return l && !n;
     }
@@ -2512,8 +2264,7 @@ var $jscomp$this = this;
     }
     zoomOut(e) {
       return (
-        (this.settings.imageSize =
-          this.state.initialZoomState || this.settings.imageSize),
+        (this.settings.imageSize = this.state.initialZoomState || this.settings.imageSize),
         (this.state.initialZoomState = null),
         (this.elems.img.style.margin = 0),
         this.position(this.elems.img)
@@ -2524,12 +2275,8 @@ var $jscomp$this = this;
       e.addEventListener(t.split('.')[0], this.events[i - 1].cb);
     }
     off(e, t) {
-      const s = this.events.findIndex(
-        (s) => s.element === e && s.eventName === t
-      );
-      this.events[s] &&
-        (e.removeEventListener(t.split('.')[0], this.events[s].cb),
-        this.events.splice(s, 1));
+      const s = this.events.findIndex((s) => s.element === e && s.eventName === t);
+      this.events[s] && (e.removeEventListener(t.split('.')[0], this.events[s].cb), this.events.splice(s, 1));
     }
   }
   const c = [];
@@ -2662,13 +2409,7 @@ jQuery.extend(jQuery.easing, {
     } else {
       var i = (j / (2 * Math.PI)) * Math.asin(l / g);
     }
-    return (
-      -(
-        g *
-        Math.pow(2, 10 * (h -= 1)) *
-        Math.sin(((h * k - i) * (2 * Math.PI)) / j)
-      ) + e
-    );
+    return -(g * Math.pow(2, 10 * (h -= 1)) * Math.sin(((h * k - i) * (2 * Math.PI)) / j)) + e;
   },
   easeOutElastic: function (f, h, e, l, k) {
     var i = 1.70158;
@@ -2689,11 +2430,7 @@ jQuery.extend(jQuery.easing, {
     } else {
       var i = (j / (2 * Math.PI)) * Math.asin(l / g);
     }
-    return (
-      g * Math.pow(2, -10 * h) * Math.sin(((h * k - i) * (2 * Math.PI)) / j) +
-      l +
-      e
-    );
+    return g * Math.pow(2, -10 * h) * Math.sin(((h * k - i) * (2 * Math.PI)) / j) + l + e;
   },
   easeInOutElastic: function (f, h, e, l, k) {
     var i = 1.70158;
@@ -2715,22 +2452,9 @@ jQuery.extend(jQuery.easing, {
       var i = (j / (2 * Math.PI)) * Math.asin(l / g);
     }
     if (h < 1) {
-      return (
-        -0.5 *
-          (g *
-            Math.pow(2, 10 * (h -= 1)) *
-            Math.sin(((h * k - i) * (2 * Math.PI)) / j)) +
-        e
-      );
+      return -0.5 * (g * Math.pow(2, 10 * (h -= 1)) * Math.sin(((h * k - i) * (2 * Math.PI)) / j)) + e;
     }
-    return (
-      g *
-        Math.pow(2, -10 * (h -= 1)) *
-        Math.sin(((h * k - i) * (2 * Math.PI)) / j) *
-        0.5 +
-      l +
-      e
-    );
+    return g * Math.pow(2, -10 * (h -= 1)) * Math.sin(((h * k - i) * (2 * Math.PI)) / j) * 0.5 + l + e;
   },
   easeInBack: function (e, f, a, i, h, g) {
     if (g == undefined) {
@@ -2775,9 +2499,7 @@ jQuery.extend(jQuery.easing, {
     if (f < g / 2) {
       return jQuery.easing.easeInBounce(e, f * 2, 0, h, g) * 0.5 + a;
     }
-    return (
-      jQuery.easing.easeOutBounce(e, f * 2 - g, 0, h, g) * 0.5 + h * 0.5 + a
-    );
+    return jQuery.easing.easeOutBounce(e, f * 2 - g, 0, h, g) * 0.5 + h * 0.5 + a;
   },
 });
 
@@ -2808,13 +2530,9 @@ jQuery.extend(jQuery.easing, {
       return (
         t.each(function (t, u) {
           var h = a.data(u, i);
-          if (!h)
-            return void r(
-              i + ' not initialized. Cannot call methods, i.e. ' + s
-            );
+          if (!h) return void r(i + ' not initialized. Cannot call methods, i.e. ' + s);
           var d = h[e];
-          if (!d || '_' == e.charAt(0))
-            return void r(s + ' is not a valid method');
+          if (!d || '_' == e.charAt(0)) return void r(s + ' is not a valid method');
           var l = d.apply(h, o);
           n = void 0 === n ? l : n;
         }),
@@ -2831,8 +2549,7 @@ jQuery.extend(jQuery.easing, {
       a &&
         (s.prototype.option ||
           (s.prototype.option = function (t) {
-            a.isPlainObject(t) &&
-              (this.options = a.extend(!0, this.options, t));
+            a.isPlainObject(t) && (this.options = a.extend(!0, this.options, t));
           }),
         (a.fn[i] = function (t) {
           if ('string' == typeof t) {
@@ -2892,11 +2609,7 @@ jQuery.extend(jQuery.easing, {
         var i = this._events && this._events[t];
         if (i && i.length) {
           (i = i.slice(0)), (e = e || []);
-          for (
-            var o = this._onceEvents && this._onceEvents[t], n = 0;
-            n < i.length;
-            n++
-          ) {
+          for (var o = this._onceEvents && this._onceEvents[t], n = 0; n < i.length; n++) {
             var s = i[n],
               r = o && o[s];
             r && (this.off(t, s), delete o[s]), s.apply(this, e);
@@ -2967,26 +2680,16 @@ jQuery.extend(jQuery.easing, {
         var i = document.body || document.documentElement;
         i.appendChild(e);
         var n = o(e);
-        (r = 200 == Math.round(t(n.width))),
-          (s.isBoxSizeOuter = r),
-          i.removeChild(e);
+        (r = 200 == Math.round(t(n.width))), (s.isBoxSizeOuter = r), i.removeChild(e);
       }
     }
     function s(e) {
-      if (
-        (n(),
-        'string' == typeof e && (e = document.querySelector(e)),
-        e && 'object' == typeof e && e.nodeType)
-      ) {
+      if ((n(), 'string' == typeof e && (e = document.querySelector(e)), e && 'object' == typeof e && e.nodeType)) {
         var s = o(e);
         if ('none' == s.display) return i();
         var a = {};
         (a.width = e.offsetWidth), (a.height = e.offsetHeight);
-        for (
-          var d = (a.isBorderBox = 'border-box' == s.boxSizing), l = 0;
-          l < h;
-          l++
-        ) {
+        for (var d = (a.isBorderBox = 'border-box' == s.boxSizing), l = 0; l < h; l++) {
           var f = u[l],
             c = s[f],
             m = parseFloat(c);
@@ -3062,13 +2765,9 @@ jQuery.extend(jQuery.easing, {
   }),
   (function (t, e) {
     'function' == typeof define && define.amd
-      ? define(
-          'fizzy-ui-utils/utils',
-          ['desandro-matches-selector/matches-selector'],
-          function (i) {
-            return e(t, i);
-          }
-        )
+      ? define('fizzy-ui-utils/utils', ['desandro-matches-selector/matches-selector'], function (i) {
+          return e(t, i);
+        })
       : 'object' == typeof module && module.exports
         ? (module.exports = e(t, require('desandro-matches-selector')))
         : (t.fizzyUIUtils = e(t, t.matchesSelector));
@@ -3093,8 +2792,7 @@ jQuery.extend(jQuery.easing, {
         i != -1 && t.splice(i, 1);
       }),
       (i.getParent = function (t, i) {
-        for (; t.parentNode && t != document.body; )
-          if (((t = t.parentNode), e(t, i))) return t;
+        for (; t.parentNode && t != document.body; ) if (((t = t.parentNode), e(t, i))) return t;
       }),
       (i.getQueryElement = function (t) {
         return 'string' == typeof t ? document.querySelector(t) : t;
@@ -3111,8 +2809,7 @@ jQuery.extend(jQuery.easing, {
             if (t instanceof HTMLElement) {
               if (!o) return void n.push(t);
               e(t, o) && n.push(t);
-              for (var i = t.querySelectorAll(o), s = 0; s < i.length; s++)
-                n.push(i[s]);
+              for (var i = t.querySelectorAll(o), s = 0; s < i.length; s++) n.push(i[s]);
             }
           }),
           n
@@ -3134,9 +2831,7 @@ jQuery.extend(jQuery.easing, {
       }),
       (i.docReady = function (t) {
         var e = document.readyState;
-        'complete' == e || 'interactive' == e
-          ? setTimeout(t)
-          : document.addEventListener('DOMContentLoaded', t);
+        'complete' == e || 'interactive' == e ? setTimeout(t) : document.addEventListener('DOMContentLoaded', t);
       }),
       (i.toDashed = function (t) {
         return t
@@ -3162,10 +2857,7 @@ jQuery.extend(jQuery.easing, {
             try {
               i = s && JSON.parse(s);
             } catch (a) {
-              return void (
-                n &&
-                n.error('Error parsing ' + r + ' on ' + t.className + ': ' + a)
-              );
+              return void (n && n.error('Error parsing ' + r + ' on ' + t.className + ': ' + a));
             }
             var u = new e(t, i);
             l && l.data(t, o, u);
@@ -3177,11 +2869,7 @@ jQuery.extend(jQuery.easing, {
   }),
   (function (t, e) {
     'function' == typeof define && define.amd
-      ? define(
-          'outlayer/item',
-          ['ev-emitter/ev-emitter', 'get-size/get-size'],
-          e
-        )
+      ? define('outlayer/item', ['ev-emitter/ev-emitter', 'get-size/get-size'], e)
       : 'object' == typeof module && module.exports
         ? (module.exports = e(require('ev-emitter'), require('get-size')))
         : ((t.Outlayer = {}), (t.Outlayer.Item = e(t.EvEmitter, t.getSize)));
@@ -3192,11 +2880,7 @@ jQuery.extend(jQuery.easing, {
       return (e = null), !0;
     }
     function o(t, e) {
-      t &&
-        ((this.element = t),
-        (this.layout = e),
-        (this.position = { x: 0, y: 0 }),
-        this._create());
+      t && ((this.element = t), (this.layout = e), (this.position = { x: 0, y: 0 }), this._create());
     }
     function n(t) {
       return t.replace(/([A-Z])/g, function (t) {
@@ -3220,8 +2904,7 @@ jQuery.extend(jQuery.easing, {
       d = (o.prototype = Object.create(t.prototype));
     (d.constructor = o),
       (d._create = function () {
-        (this._transn = { ingProperties: {}, clean: {}, onEnd: {} }),
-          this.css({ position: 'absolute' });
+        (this._transn = { ingProperties: {}, clean: {}, onEnd: {} }), this.css({ position: 'absolute' });
       }),
       (d.handleEvent = function (t) {
         var e = 'on' + t.type;
@@ -3269,30 +2952,22 @@ jQuery.extend(jQuery.easing, {
           h = o ? 'top' : 'bottom',
           d = o ? 'bottom' : 'top',
           l = this.position.y + t[u];
-        (e[h] = this.getYValue(l)),
-          (e[d] = ''),
-          this.css(e),
-          this.emitEvent('layout', [this]);
+        (e[h] = this.getYValue(l)), (e[d] = ''), this.css(e), this.emitEvent('layout', [this]);
       }),
       (d.getXValue = function (t) {
         var e = this.layout._getOption('horizontal');
-        return this.layout.options.percentPosition && !e
-          ? (t / this.layout.size.width) * 100 + '%'
-          : t + 'px';
+        return this.layout.options.percentPosition && !e ? (t / this.layout.size.width) * 100 + '%' : t + 'px';
       }),
       (d.getYValue = function (t) {
         var e = this.layout._getOption('horizontal');
-        return this.layout.options.percentPosition && e
-          ? (t / this.layout.size.height) * 100 + '%'
-          : t + 'px';
+        return this.layout.options.percentPosition && e ? (t / this.layout.size.height) * 100 + '%' : t + 'px';
       }),
       (d._transitionTo = function (t, e) {
         this.getPosition();
         var i = this.position.x,
           o = this.position.y,
           n = t == this.position.x && e == this.position.y;
-        if ((this.setPosition(t, e), n && !this.isTransitioning))
-          return void this.layoutPosition();
+        if ((this.setPosition(t, e), n && !this.isTransitioning)) return void this.layoutPosition();
         var s = t - i,
           r = e - o,
           a = {};
@@ -3306,11 +2981,7 @@ jQuery.extend(jQuery.easing, {
       (d.getTranslate = function (t, e) {
         var i = this.layout._getOption('originLeft'),
           o = this.layout._getOption('originTop');
-        return (
-          (t = i ? t : -t),
-          (e = o ? e : -e),
-          'translate3d(' + t + 'px, ' + e + 'px, 0)'
-        );
+        return (t = i ? t : -t), (e = o ? e : -e), 'translate3d(' + t + 'px, ' + e + 'px, 0)';
       }),
       (d.goTo = function (t, e) {
         this.setPosition(t, e), this.layoutPosition();
@@ -3324,20 +2995,16 @@ jQuery.extend(jQuery.easing, {
         for (var e in t.onTransitionEnd) t.onTransitionEnd[e].call(this);
       }),
       (d.transition = function (t) {
-        if (!parseFloat(this.layout.options.transitionDuration))
-          return void this._nonTransition(t);
+        if (!parseFloat(this.layout.options.transitionDuration)) return void this._nonTransition(t);
         var e = this._transn;
         for (var i in t.onTransitionEnd) e.onEnd[i] = t.onTransitionEnd[i];
-        for (i in t.to)
-          (e.ingProperties[i] = !0), t.isCleaning && (e.clean[i] = !0);
+        for (i in t.to) (e.ingProperties[i] = !0), t.isCleaning && (e.clean[i] = !0);
         if (t.from) {
           this.css(t.from);
           var o = this.element.offsetHeight;
           o = null;
         }
-        this.enableTransition(t.to),
-          this.css(t.to),
-          (this.isTransitioning = !0);
+        this.enableTransition(t.to), this.css(t.to), (this.isTransitioning = !0);
       });
     var l = 'opacity,' + n(a);
     (d.enableTransition = function () {
@@ -3366,8 +3033,7 @@ jQuery.extend(jQuery.easing, {
         if (
           (delete e.ingProperties[o],
           i(e.ingProperties) && this.disableTransition(),
-          o in e.clean &&
-            ((this.element.style[t.propertyName] = ''), delete e.clean[o]),
+          o in e.clean && ((this.element.style[t.propertyName] = ''), delete e.clean[o]),
           o in e.onEnd)
         ) {
           var n = e.onEnd[o];
@@ -3377,9 +3043,7 @@ jQuery.extend(jQuery.easing, {
       }
     }),
       (d.disableTransition = function () {
-        this.removeTransitionStyles(),
-          this.element.removeEventListener(u, this, !1),
-          (this.isTransitioning = !1);
+        this.removeTransitionStyles(), this.element.removeEventListener(u, this, !1), (this.isTransitioning = !1);
       }),
       (d._removeStyles = function (t) {
         var e = {};
@@ -3399,9 +3063,7 @@ jQuery.extend(jQuery.easing, {
         (t = isNaN(t) ? 0 : t), (this.staggerDelay = t + 'ms');
       }),
       (d.removeElem = function () {
-        this.element.parentNode.removeChild(this.element),
-          this.css({ display: '' }),
-          this.emitEvent('remove', [this]);
+        this.element.parentNode.removeChild(this.element), this.css({ display: '' }), this.emitEvent('remove', [this]);
       }),
       (d.remove = function () {
         return r && parseFloat(this.layout.options.transitionDuration)
@@ -3446,8 +3108,7 @@ jQuery.extend(jQuery.easing, {
           });
       }),
       (d.onHideTransitionEnd = function () {
-        this.isHidden &&
-          (this.css({ display: 'none' }), this.emitEvent('hide'));
+        this.isHidden && (this.css({ display: 'none' }), this.emitEvent('hide'));
       }),
       (d.destroy = function () {
         this.css({
@@ -3468,12 +3129,7 @@ jQuery.extend(jQuery.easing, {
     'function' == typeof define && define.amd
       ? define(
           'outlayer/outlayer',
-          [
-            'ev-emitter/ev-emitter',
-            'get-size/get-size',
-            'fizzy-ui-utils/utils',
-            './item',
-          ],
+          ['ev-emitter/ev-emitter', 'get-size/get-size', 'fizzy-ui-utils/utils', './item'],
           function (i, o, n, s) {
             return e(t, i, o, n, s);
           }
@@ -3486,24 +3142,12 @@ jQuery.extend(jQuery.easing, {
             require('fizzy-ui-utils'),
             require('./item')
           ))
-        : (t.Outlayer = e(
-            t,
-            t.EvEmitter,
-            t.getSize,
-            t.fizzyUIUtils,
-            t.Outlayer.Item
-          ));
+        : (t.Outlayer = e(t, t.EvEmitter, t.getSize, t.fizzyUIUtils, t.Outlayer.Item));
   })(window, function (t, e, i, o, n) {
     'use strict';
     function s(t, e) {
       var i = o.getQueryElement(t);
-      if (!i)
-        return void (
-          u &&
-          u.error(
-            'Bad element for ' + this.constructor.namespace + ': ' + (i || t)
-          )
-        );
+      if (!i) return void (u && u.error('Bad element for ' + this.constructor.namespace + ': ' + (i || t)));
       (this.element = i),
         h && (this.$element = h(this.element)),
         (this.options = o.extend({}, this.constructor.defaults)),
@@ -3517,11 +3161,7 @@ jQuery.extend(jQuery.easing, {
       function e() {
         t.apply(this, arguments);
       }
-      return (
-        (e.prototype = Object.create(t.prototype)),
-        (e.prototype.constructor = e),
-        e
-      );
+      return (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), e;
     }
     function a(t) {
       if ('number' == typeof t) return t;
@@ -3558,9 +3198,7 @@ jQuery.extend(jQuery.easing, {
       }),
       (c._getOption = function (t) {
         var e = this.constructor.compatOptions[t];
-        return e && void 0 !== this.options[e]
-          ? this.options[e]
-          : this.options[t];
+        return e && void 0 !== this.options[e] ? this.options[e] : this.options[t];
       }),
       (s.compatOptions = {
         initLayout: 'isInitLayout',
@@ -3583,14 +3221,7 @@ jQuery.extend(jQuery.easing, {
         this.items = this._itemize(this.element.children);
       }),
       (c._itemize = function (t) {
-        for (
-          var e = this._filterFindItemElements(t),
-            i = this.constructor.Item,
-            o = [],
-            n = 0;
-          n < e.length;
-          n++
-        ) {
+        for (var e = this._filterFindItemElements(t), i = this.constructor.Item, o = [], n = 0; n < e.length; n++) {
           var s = e[n],
             r = new i(s, this);
           o.push(r);
@@ -3622,16 +3253,12 @@ jQuery.extend(jQuery.easing, {
         var o,
           n = this.options[t];
         n
-          ? ('string' == typeof n
-              ? (o = this.element.querySelector(n))
-              : n instanceof HTMLElement && (o = n),
+          ? ('string' == typeof n ? (o = this.element.querySelector(n)) : n instanceof HTMLElement && (o = n),
             (this[t] = o ? i(o)[e] : n))
           : (this[t] = 0);
       }),
       (c.layoutItems = function (t, e) {
-        (t = this._getItemsForLayout(t)),
-          this._layoutItems(t, e),
-          this._postLayout();
+        (t = this._getItemsForLayout(t)), this._layoutItems(t, e), this._postLayout();
       }),
       (c._getItemsForLayout = function (t) {
         return t.filter(function (t) {
@@ -3659,9 +3286,7 @@ jQuery.extend(jQuery.easing, {
       }),
       (c.updateStagger = function () {
         var t = this.options.stagger;
-        return null === t || void 0 === t
-          ? void (this.stagger = 0)
-          : ((this.stagger = a(t)), this.stagger);
+        return null === t || void 0 === t ? void (this.stagger = 0) : ((this.stagger = a(t)), this.stagger);
       }),
       (c._positionItem = function (t, e, i, o, n) {
         o ? t.goTo(e, i) : (t.stagger(n * this.stagger), t.moveTo(e, i));
@@ -3673,9 +3298,7 @@ jQuery.extend(jQuery.easing, {
         var t = this._getOption('resizeContainer');
         if (t) {
           var e = this._getContainerSize();
-          e &&
-            (this._setContainerMeasure(e.width, !0),
-            this._setContainerMeasure(e.height, !1));
+          e && (this._setContainerMeasure(e.width, !0), this._setContainerMeasure(e.height, !1));
         }
       }),
       (c._getContainerSize = d),
@@ -3684,14 +3307,8 @@ jQuery.extend(jQuery.easing, {
           var i = this.size;
           i.isBorderBox &&
             (t += e
-              ? i.paddingLeft +
-                i.paddingRight +
-                i.borderLeftWidth +
-                i.borderRightWidth
-              : i.paddingBottom +
-                i.paddingTop +
-                i.borderTopWidth +
-                i.borderBottomWidth),
+              ? i.paddingLeft + i.paddingRight + i.borderLeftWidth + i.borderRightWidth
+              : i.paddingBottom + i.paddingTop + i.borderTopWidth + i.borderBottomWidth),
             (t = Math.max(t, 0)),
             (this.element.style[e ? 'width' : 'height'] = t + 'px');
         }
@@ -3728,10 +3345,7 @@ jQuery.extend(jQuery.easing, {
         e && delete e.isIgnored;
       }),
       (c.stamp = function (t) {
-        (t = this._find(t)),
-          t &&
-            ((this.stamps = this.stamps.concat(t)),
-            t.forEach(this.ignore, this));
+        (t = this._find(t)), t && ((this.stamps = this.stamps.concat(t)), t.forEach(this.ignore, this));
       }),
       (c.unstamp = function (t) {
         (t = this._find(t)),
@@ -3741,17 +3355,10 @@ jQuery.extend(jQuery.easing, {
             }, this);
       }),
       (c._find = function (t) {
-        if (t)
-          return (
-            'string' == typeof t && (t = this.element.querySelectorAll(t)),
-            (t = o.makeArray(t))
-          );
+        if (t) return 'string' == typeof t && (t = this.element.querySelectorAll(t)), (t = o.makeArray(t));
       }),
       (c._manageStamps = function () {
-        this.stamps &&
-          this.stamps.length &&
-          (this._getBoundingRect(),
-          this.stamps.forEach(this._manageStamp, this));
+        this.stamps && this.stamps.length && (this._getBoundingRect(), this.stamps.forEach(this._manageStamp, this));
       }),
       (c._getBoundingRect = function () {
         var t = this.element.getBoundingClientRect(),
@@ -3875,9 +3482,7 @@ jQuery.extend(jQuery.easing, {
           }),
           this.unbindResize();
         var e = this.element.outlayerGUID;
-        delete f[e],
-          delete this.element.outlayerGUID,
-          h && h.removeData(this.element, this.constructor.namespace);
+        delete f[e], delete this.element.outlayerGUID, h && h.removeData(this.element, this.constructor.namespace);
       }),
       (s.data = function (t) {
         t = o.getQueryElement(t);
@@ -3940,15 +3545,10 @@ jQuery.extend(jQuery.easing, {
   }),
   (function (t, e) {
     'function' == typeof define && define.amd
-      ? define(
-          'isotope-layout/js/layout-mode',
-          ['get-size/get-size', 'outlayer/outlayer'],
-          e
-        )
+      ? define('isotope-layout/js/layout-mode', ['get-size/get-size', 'outlayer/outlayer'], e)
       : 'object' == typeof module && module.exports
         ? (module.exports = e(require('get-size'), require('outlayer')))
-        : ((t.Isotope = t.Isotope || {}),
-          (t.Isotope.LayoutMode = e(t.getSize, t.Outlayer)));
+        : ((t.Isotope = t.Isotope || {}), (t.Isotope.LayoutMode = e(t.getSize, t.Outlayer)));
   })(window, function (t, e) {
     'use strict';
     function i(t) {
@@ -4026,11 +3626,7 @@ jQuery.extend(jQuery.easing, {
   }),
   (function (t, e) {
     'function' == typeof define && define.amd
-      ? define(
-          'masonry-layout/masonry',
-          ['outlayer/outlayer', 'get-size/get-size'],
-          e
-        )
+      ? define('masonry-layout/masonry', ['outlayer/outlayer', 'get-size/get-size'], e)
       : 'object' == typeof module && module.exports
         ? (module.exports = e(require('outlayer'), require('get-size')))
         : (t.Masonry = e(t.Outlayer, t.getSize));
@@ -4074,9 +3670,7 @@ jQuery.extend(jQuery.easing, {
           o = Math[i](t.size.outerWidth / this.columnWidth);
         o = Math.min(o, this.cols);
         for (
-          var n = this.options.horizontalOrder
-              ? '_getHorizontalColPosition'
-              : '_getTopColPosition',
+          var n = this.options.horizontalOrder ? '_getHorizontalColPosition' : '_getTopColPosition',
             s = this[n](o, t),
             r = { x: this.columnWidth * s.col, y: s.y },
             a = s.y + t.size.outerHeight,
@@ -4095,8 +3689,7 @@ jQuery.extend(jQuery.easing, {
       }),
       (o._getTopColGroup = function (t) {
         if (t < 2) return this.colYs;
-        for (var e = [], i = this.cols + 1 - t, o = 0; o < i; o++)
-          e[o] = this._getColGroupY(o, t);
+        for (var e = [], i = this.cols + 1 - t, o = 0; o < i; o++) e[o] = this._getColGroupY(o, t);
         return e;
       }),
       (o._getColGroupY = function (t, e) {
@@ -4109,10 +3702,7 @@ jQuery.extend(jQuery.easing, {
           o = t > 1 && i + t > this.cols;
         i = o ? 0 : i;
         var n = e.size.outerWidth && e.size.outerHeight;
-        return (
-          (this.horizontalColIndex = n ? i + t : this.horizontalColIndex),
-          { col: i, y: this._getColGroupY(i, t) }
-        );
+        return (this.horizontalColIndex = n ? i + t : this.horizontalColIndex), { col: i, y: this._getColGroupY(i, t) };
       }),
       (o._manageStamp = function (t) {
         var i = e(t),
@@ -4124,23 +3714,13 @@ jQuery.extend(jQuery.easing, {
         a = Math.max(0, a);
         var u = Math.floor(r / this.columnWidth);
         (u -= r % this.columnWidth ? 0 : 1), (u = Math.min(this.cols - 1, u));
-        for (
-          var h = this._getOption('originTop'),
-            d = (h ? o.top : o.bottom) + i.outerHeight,
-            l = a;
-          l <= u;
-          l++
-        )
+        for (var h = this._getOption('originTop'), d = (h ? o.top : o.bottom) + i.outerHeight, l = a; l <= u; l++)
           this.colYs[l] = Math.max(d, this.colYs[l]);
       }),
       (o._getContainerSize = function () {
         this.maxY = Math.max.apply(Math, this.colYs);
         var t = { height: this.maxY };
-        return (
-          this._getOption('fitWidth') &&
-            (t.width = this._getContainerFitWidth()),
-          t
-        );
+        return this._getOption('fitWidth') && (t.width = this._getContainerFitWidth()), t;
       }),
       (o._getContainerFitWidth = function () {
         for (var t = 0, e = this.cols; --e && 0 === this.colYs[e]; ) t++;
@@ -4155,16 +3735,9 @@ jQuery.extend(jQuery.easing, {
   }),
   (function (t, e) {
     'function' == typeof define && define.amd
-      ? define(
-          'isotope-layout/js/layout-modes/masonry',
-          ['../layout-mode', 'masonry-layout/masonry'],
-          e
-        )
+      ? define('isotope-layout/js/layout-modes/masonry', ['../layout-mode', 'masonry-layout/masonry'], e)
       : 'object' == typeof module && module.exports
-        ? (module.exports = e(
-            require('../layout-mode'),
-            require('masonry-layout')
-          ))
+        ? (module.exports = e(require('../layout-mode'), require('masonry-layout')))
         : e(t.Isotope.LayoutMode, t.Masonry);
   })(window, function (t, e) {
     'use strict';
@@ -4200,10 +3773,7 @@ jQuery.extend(jQuery.easing, {
       i = e.prototype;
     return (
       (i._resetLayout = function () {
-        (this.x = 0),
-          (this.y = 0),
-          (this.maxY = 0),
-          this._getMeasurement('gutter', 'outerWidth');
+        (this.x = 0), (this.y = 0), (this.maxY = 0), this._getMeasurement('gutter', 'outerWidth');
       }),
       (i._getItemLayoutPosition = function (t) {
         t.getSize();
@@ -4211,11 +3781,7 @@ jQuery.extend(jQuery.easing, {
           i = this.isotope.size.innerWidth + this.gutter;
         0 !== this.x && e + this.x > i && ((this.x = 0), (this.y = this.maxY));
         var o = { x: this.x, y: this.y };
-        return (
-          (this.maxY = Math.max(this.maxY, this.y + t.size.outerHeight)),
-          (this.x += e),
-          o
-        );
+        return (this.maxY = Math.max(this.maxY, this.y + t.size.outerHeight)), (this.x += e), o;
       }),
       (i._getContainerSize = function () {
         return { height: this.maxY };
@@ -4239,9 +3805,7 @@ jQuery.extend(jQuery.easing, {
       }),
       (i._getItemLayoutPosition = function (t) {
         t.getSize();
-        var e =
-            (this.isotope.size.innerWidth - t.size.outerWidth) *
-            this.options.horizontalAlignment,
+        var e = (this.isotope.size.innerWidth - t.size.outerWidth) * this.options.horizontalAlignment,
           i = this.y;
         return (this.y += t.size.outerHeight), { x: e, y: i };
       }),
@@ -4336,11 +3900,7 @@ jQuery.extend(jQuery.easing, {
         (this.itemGUID = 0), e.prototype.reloadItems.call(this);
       }),
       (l._itemize = function () {
-        for (
-          var t = e.prototype._itemize.apply(this, arguments), i = 0;
-          i < t.length;
-          i++
-        ) {
+        for (var t = e.prototype._itemize.apply(this, arguments), i = 0; i < t.length; i++) {
           var o = t[i];
           o.id = this.itemGUID++;
         }
@@ -4349,29 +3909,21 @@ jQuery.extend(jQuery.easing, {
       (l._initLayoutMode = function (t) {
         var e = r.modes[t],
           i = this.options[t] || {};
-        (this.options[t] = e.options ? n.extend(e.options, i) : i),
-          (this.modes[t] = new e(this));
+        (this.options[t] = e.options ? n.extend(e.options, i) : i), (this.modes[t] = new e(this));
       }),
       (l.layout = function () {
-        return !this._isLayoutInited && this._getOption('initLayout')
-          ? void this.arrange()
-          : void this._layout();
+        return !this._isLayoutInited && this._getOption('initLayout') ? void this.arrange() : void this._layout();
       }),
       (l._layout = function () {
         var t = this._getIsInstant();
-        this._resetLayout(),
-          this._manageStamps(),
-          this.layoutItems(this.filteredItems, t),
-          (this._isLayoutInited = !0);
+        this._resetLayout(), this._manageStamps(), this.layoutItems(this.filteredItems, t), (this._isLayoutInited = !0);
       }),
       (l.arrange = function (t) {
         this.option(t), this._getIsInstant();
         var e = this._filter(this.items);
         (this.filteredItems = e.matches),
           this._bindArrangeComplete(),
-          this._isInstant
-            ? this._noTransition(this._hideReveal, [e])
-            : this._hideReveal(e),
+          this._isInstant ? this._noTransition(this._hideReveal, [e]) : this._hideReveal(e),
           this._sort(),
           this._layout();
       }),
@@ -4386,10 +3938,7 @@ jQuery.extend(jQuery.easing, {
       }),
       (l._bindArrangeComplete = function () {
         function t() {
-          e &&
-            i &&
-            o &&
-            n.dispatchEvent('arrangeComplete', null, [n.filteredItems]);
+          e && i && o && n.dispatchEvent('arrangeComplete', null, [n.filteredItems]);
         }
         var e,
           i,
@@ -4408,16 +3957,11 @@ jQuery.extend(jQuery.easing, {
       (l._filter = function (t) {
         var e = this.options.filter;
         e = e || '*';
-        for (
-          var i = [], o = [], n = [], s = this._getFilterTest(e), r = 0;
-          r < t.length;
-          r++
-        ) {
+        for (var i = [], o = [], n = [], s = this._getFilterTest(e), r = 0; r < t.length; r++) {
           var a = t[r];
           if (!a.isIgnored) {
             var u = s(a);
-            u && i.push(a),
-              u && a.isHidden ? o.push(a) : u || a.isHidden || n.push(a);
+            u && i.push(a), u && a.isHidden ? o.push(a) : u || a.isHidden || n.push(a);
           }
         }
         return { matches: i, needReveal: o, needHide: n };
@@ -4494,15 +4038,13 @@ jQuery.extend(jQuery.easing, {
       (l._sort = function () {
         if (this.options.sortBy) {
           var t = n.makeArray(this.options.sortBy);
-          this._getIsSameSortBy(t) ||
-            (this.sortHistory = t.concat(this.sortHistory));
+          this._getIsSameSortBy(t) || (this.sortHistory = t.concat(this.sortHistory));
           var e = a(this.sortHistory, this.options.sortAscending);
           this.filteredItems.sort(e);
         }
       }),
       (l._getIsSameSortBy = function (t) {
-        for (var e = 0; e < t.length; e++)
-          if (t[e] != this.sortHistory[e]) return !1;
+        for (var e = 0; e < t.length; e++) if (t[e] != this.sortHistory[e]) return !1;
         return !0;
       }),
       (l._mode = function () {
@@ -4545,12 +4087,7 @@ jQuery.extend(jQuery.easing, {
       }),
       (l._filterRevealAdded = function (t) {
         var e = this._filter(t);
-        return (
-          this.hide(e.needHide),
-          this.reveal(e.matches),
-          this.layoutItems(e.matches, !0),
-          e.matches
-        );
+        return this.hide(e.needHide), this.reveal(e.matches), this.layoutItems(e.matches, !0), e.matches;
       }),
       (l.insert = function (t) {
         var e = this.addItems(t);
@@ -4558,8 +4095,7 @@ jQuery.extend(jQuery.easing, {
           var i,
             o,
             n = e.length;
-          for (i = 0; i < n; i++)
-            (o = e[i]), this.element.appendChild(o.element);
+          for (i = 0; i < n; i++) (o = e[i]), this.element.appendChild(o.element);
           var s = this._filter(e).matches;
           for (i = 0; i < n; i++) e[i].isLayoutInstant = !0;
           for (this.arrange(), i = 0; i < n; i++) delete e[i].isLayoutInstant;

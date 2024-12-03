@@ -17,8 +17,7 @@ export default function Milestone() {
           </div>
           <div className="col-md-3 my-3">
             <div className="text-center">
-              [icon]{' '}
-              {/*className="bg-light p-5 display-1 text-primary rounded-circle "*/}
+              [icon] {/*className="bg-light p-5 display-1 text-primary rounded-circle "*/}
               <h2 className="mt-3 mb-0">1250+</h2>
               <p className="text-uppercase fw-bold">Clients</p>
             </div>

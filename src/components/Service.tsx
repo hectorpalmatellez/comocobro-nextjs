@@ -13,8 +13,8 @@ export default function Service() {
           <div className="col-md-6 ">
             <p className="fs-5">
               {' '}
-              Eius ipsa iusto ea tempore aliquam possimus modi quam. Sunt vitae
-              dicta animi vel, aliquid voluptate maiores voluptatum.
+              Eius ipsa iusto ea tempore aliquam possimus modi quam. Sunt vitae dicta animi vel, aliquid voluptate
+              maiores voluptatum.
             </p>
           </div>
         </div>
@@ -26,8 +26,7 @@ export default function Service() {
               <p>Sunt vitae dicta animi vel, aliquid maiores voluptatum.</p>
               <p
                 className="position-absolute display-1 fw-bolder bottom-0 end-0 z-n1"
-                style={{ color: '#A8A6DF', fontSize: 150 }}
-              >
+                style={{ color: '#A8A6DF', fontSize: 150 }}>
                 01
               </p>
             </div>
@@ -39,8 +38,7 @@ export default function Service() {
               <p>Sunt vitae dicta animi vel, aliquid maiores voluptatum.</p>
               <p
                 className="position-absolute display-1 fw-bolder bottom-0 end-0 z-n1"
-                style={{ color: '#E2E2EA', fontSize: 150 }}
-              >
+                style={{ color: '#E2E2EA', fontSize: 150 }}>
                 02
               </p>
             </div>
@@ -52,8 +50,7 @@ export default function Service() {
               <p>Sunt vitae dicta animi vel, aliquid maiores voluptatum.</p>
               <p
                 className="position-absolute display-1 fw-bolder bottom-0 end-0 z-n1"
-                style={{ color: '#A8A6DF', fontSize: 150 }}
-              >
+                style={{ color: '#A8A6DF', fontSize: 150 }}>
                 03
               </p>
             </div>
@@ -65,8 +62,7 @@ export default function Service() {
               <p>Sunt vitae dicta animi vel, aliquid maiores voluptatum.</p>
               <p
                 className="position-absolute display-1 fw-bolder bottom-0 end-0 z-n1"
-                style={{ color: '#E2E2EA', fontSize: 150 }}
-              >
+                style={{ color: '#E2E2EA', fontSize: 150 }}>
                 04
               </p>
             </div>
@@ -78,8 +74,7 @@ export default function Service() {
               <p>Sunt vitae dicta animi vel, aliquid maiores voluptatum.</p>
               <p
                 className="position-absolute display-1 fw-bolder bottom-0 end-0 z-n1"
-                style={{ color: '#A8A6DF', fontSize: 150 }}
-              >
+                style={{ color: '#A8A6DF', fontSize: 150 }}>
                 05
               </p>
             </div>
@@ -91,8 +86,7 @@ export default function Service() {
               <p>Sunt vitae dicta animi vel, aliquid maiores voluptatum.</p>
               <p
                 className="position-absolute display-1 fw-bolder bottom-0 end-0 z-n1"
-                style={{ color: '#E2E2EA', fontSize: 150 }}
-              >
+                style={{ color: '#E2E2EA', fontSize: 150 }}>
                 06
               </p>
             </div>
