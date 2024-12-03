@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function Testimonial() {
   return (
     <section id="testimonial" className="padding-medium position-relative">

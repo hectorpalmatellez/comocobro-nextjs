@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function AboutUs() {
   return (
     <section id="about us" className="padding-medium">

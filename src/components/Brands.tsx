@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function Brands() {
   return (
     <section id="brand-collection" className="padding-medium position-relative">
