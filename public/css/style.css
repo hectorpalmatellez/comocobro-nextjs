@@ -61,13 +61,13 @@ CSS STRUCTURE:
 
 /* Theme Colors */
 :root {
-  --accent-color: #CECCFF;
+  --accent-color: #ceccff;
   --dark-color: #222222;
   --light-dark-color: #727272;
   --light-color: #fff;
   --grey-color: #dbdbdb;
   --light-grey-color: #fafafa;
-  --primary-color: #CECCFF;
+  --primary-color: #ceccff;
   --light-primary-color: #eef1f3;
 }
 
@@ -76,11 +76,9 @@ CSS STRUCTURE:
   --body-font: 'Roboto', sans-serif;
 }
 
-
 /*--------------------------------------------------------------
 /** 2. GENERAL TYPOGRAPHY
 --------------------------------------------------------------*/
-
 
 body {
   --bs-link-color: #333;
@@ -98,11 +96,11 @@ body {
   --bs-body-line-height: 2;
   --bs-body-color: #222222;
 
-  --bs-primary: #CECCFF;
+  --bs-primary: #ceccff;
   --bs-primary-rgb: 206, 204, 255;
 
-  --bs-primary-bg-subtle: #FFF9EB;
-  --bs-border-color: #F7F7F7;
+  --bs-primary-bg-subtle: #fff9eb;
+  --bs-border-color: #f7f7f7;
 
   --bs-secondary-rgb: 230, 243, 251;
 
@@ -122,38 +120,38 @@ body {
   padding: 1.2rem 3rem;
   transition: all 0.3s ease-in;
   --bs-btn-color: #222222;
-  --bs-btn-bg: #CECCFF;
-  --bs-btn-border-color: #CECCFF;
+  --bs-btn-bg: #ceccff;
+  --bs-btn-border-color: #ceccff;
   --bs-btn-hover-color: #222222;
   --bs-btn-hover-bg: #bebcfa;
   --bs-btn-hover-border-color: #bebcfa;
   --bs-btn-focus-shadow-rgb: 49, 132, 253;
   --bs-btn-active-color: #222222;
-  --bs-btn-active-bg: #CECCFF;
-  --bs-btn-active-border-color: #CECCFF;
+  --bs-btn-active-bg: #ceccff;
+  --bs-btn-active-border-color: #ceccff;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #222222;
   --bs-btn-disabled-bg: #d3d7dd;
-  --bs-btn-disabled-border-color: #CECCFF;
+  --bs-btn-disabled-border-color: #ceccff;
 }
 
 .btn-outline-primary {
   transition: all 0.3s ease-in;
   padding: 1.2rem 3rem;
   letter-spacing: 0.02375rem;
-  --bs-btn-color: #CECCFF;
-  --bs-btn-border-color: #CECCFF;
+  --bs-btn-color: #ceccff;
+  --bs-btn-border-color: #ceccff;
   --bs-btn-hover-color: #222222;
-  --bs-btn-hover-bg: #CECCFF;
-  --bs-btn-hover-border-color: #CECCFF;
+  --bs-btn-hover-bg: #ceccff;
+  --bs-btn-hover-border-color: #ceccff;
   --bs-btn-focus-shadow-rgb: 13, 110, 253;
   --bs-btn-active-color: #222222;
-  --bs-btn-active-bg: #CECCFF;
-  --bs-btn-active-border-color: #CECCFF;
+  --bs-btn-active-bg: #ceccff;
+  --bs-btn-active-border-color: #ceccff;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #CECCFF;
+  --bs-btn-disabled-color: #ceccff;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #CECCFF;
+  --bs-btn-disabled-border-color: #ceccff;
   --bs-gradient: none;
 }
 
@@ -180,11 +178,7 @@ body {
   --bs-btn-disabled-border-color: #000;
 }
 
-
-
-
-@media screen and (max-width:991px) {
-
+@media screen and (max-width: 991px) {
   .btn-primary,
   .btn-outline-primary,
   .btn-outline-dark,
@@ -202,7 +196,7 @@ h1,
 h2,
 h3,
 h4,
-h5{
+h5 {
   color: #222222;
   font-weight: 600;
   text-transform: capitalize;
@@ -266,7 +260,6 @@ a {
   }
 }
 
-
 /*----------------------------------------------*/
 /* 3. SITE STRUCTURE */
 /*----------------------------------------------*/
@@ -319,7 +312,6 @@ a {
 }
 
 @keyframes animation {
-
   0%,
   80%,
   100% {
@@ -331,13 +323,10 @@ a {
   }
 }
 
-
-
 /* offcanvas cross button style  */
 .btn-close:focus {
   box-shadow: none;
 }
-
 
 /* nav bar style  */
 .navbar-nav .nav-link.active,
@@ -351,7 +340,6 @@ a {
   font-weight: 900;
   text-transform: uppercase;
 }
-
 
 /* hero section style */
 .banner-text {
@@ -369,7 +357,6 @@ iconify-icon.arrow-icon {
     font-size: 5rem;
   }
 }
-
 
 /* about section style */
 .nav-tabs .nav-item {
@@ -394,26 +381,29 @@ iconify-icon.arrow-icon {
   transition: all 0.1s ease-in;
 }
 
-
 /* testimonial section style */
 .swiper-pagination-bullet-active {
   opacity: var(--swiper-pagination-bullet-opacity, 1);
   background: var(--dark-color);
 }
 .swiper-pagination-bullet {
-  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 12px));
-  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 12px));
+  width: var(
+    --swiper-pagination-bullet-width,
+    var(--swiper-pagination-bullet-size, 12px)
+  );
+  height: var(
+    --swiper-pagination-bullet-height,
+    var(--swiper-pagination-bullet-size, 12px)
+  );
 }
-
 
 /* brand section style */
-img.brand{
-opacity: 0.5;
+img.brand {
+  opacity: 0.5;
 }
-img.brand:hover{
-opacity: 1;
+img.brand:hover {
+  opacity: 1;
 }
-
 
 /*---- video section style ----*/
 /* color box style */
@@ -431,7 +421,6 @@ div#cboxOverlay {
   align-items: center;
   justify-content: center;
 }
-
 
 /* blog section style */
 
@@ -456,7 +445,7 @@ div#cboxOverlay {
 }
 
 .zoom-effect:before {
-  content: "";
+  content: '';
   display: block;
   width: 100%;
   height: 100%;
@@ -475,21 +464,20 @@ div#cboxOverlay {
   cursor: pointer;
 }
 
-
 /*---- footer section style ----*/
-#footer{
-  background-color: #332E54;
+#footer {
+  background-color: #332e54;
 }
 
 .form-control {
   font-size: 1rem;
-  color: #908F8D;
+  color: #908f8d;
   line-height: normal;
   letter-spacing: 0.02125rem;
   text-transform: capitalize;
   border-radius: 0.25rem;
-  border: 1px solid rgba(65, 64, 62, 0.20);
-  background: #FFF;
+  border: 1px solid rgba(65, 64, 62, 0.2);
+  background: #fff;
   display: flex;
   padding: 1.25rem 0rem 1.25rem 1.25rem;
   align-items: center;
@@ -498,14 +486,13 @@ div#cboxOverlay {
 }
 
 .form-control:focus {
-  border-color: #41403E;
+  border-color: #41403e;
   box-shadow: none;
 }
 
-
 /* footer style */
 a.footer-link {
-  color: #A1A1A1;
+  color: #a1a1a1;
   font-size: 1.0625rem;
   text-transform: uppercase;
 }
@@ -514,20 +501,18 @@ a.footer-link:hover {
   color: var(--light-color);
 }
 
-iconify-icon.social-icon{
-  color: #A1A1A1;
+iconify-icon.social-icon {
+  color: #a1a1a1;
 }
-iconify-icon.social-icon:hover{
+iconify-icon.social-icon:hover {
   color: var(--light-color);
 }
 
-p.footer-para{
-  color: #A1A1A1;
+p.footer-para {
+  color: #a1a1a1;
 }
 
-
 @media screen and (max-width: 991px) {
-
   /* offcanvas menu */
   .offcanvas-body .nav-item {
     font-weight: 700;
@@ -560,8 +545,6 @@ p.footer-para{
     top: 21px;
   }
 }
-
-
 
 /*--------------------------------------------------------------
 Chocolat
