@@ -1,10 +1,11 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function Testimonial() {
   return (
     <section id="testimonial" className="padding-medium position-relative">
       <div className="position-absolute start-0 top-0 z-n1 d-none d-lg-flex">
-        <img src="/images/pattern-2.png" alt="pattern" />
+        <Image src="/images/pattern-2.png" alt="pattern" />
       </div>
       <div className="container">
         <div className="offset-md-2 col-md-8 ">

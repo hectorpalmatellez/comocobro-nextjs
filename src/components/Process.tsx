@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function Process() {
   return (
@@ -9,7 +10,7 @@ export default function Process() {
           <h3 className="display-5 fw-semibold">Our Design Process</h3>
         </div>
         <div className="position-absolute z-n1  top-50 start-50 translate-middle d-none d-xxl-flex">
-          <img src="/images/process-line.png" alt="pattern" />
+          <Image src="/images/process-line.png" alt="pattern" />
         </div>
         <div className="row d-none d-xxl-flex">
           <div className="col">

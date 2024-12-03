@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function Talk() {
   return (
@@ -9,9 +10,9 @@ export default function Talk() {
             <h3 className="display-5 fw-semibold">Get yourself the best possible online presence for your business </h3>
           </div>
           <div className="col-md-2 ">
-            <a href="#" className="btn btn-primary ">
-              Let's Talk
-            </a>
+            <Link href="#" className="btn btn-primary">
+              Let&#39;s Talk
+            </Link>
           </div>
         </div>
       </div>

@@ -1,3 +1,6 @@
+import React from 'react';
+import Image from 'next/image';
+
 import Talk from '../components/Talk';
 import AboutUs from '../components/AboutUs';
 import Service from '../components/Service';
@@ -23,7 +26,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="col-lg-5 offset-lg-1">
-                <img src="/images/banner-img.png" alt="img" className="img-fluid" />
+                <Image src="/images/banner-img.png" alt="img" className="img-fluid" />
               </div>
             </div>
           </div>

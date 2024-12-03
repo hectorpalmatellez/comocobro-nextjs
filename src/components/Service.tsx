@@ -1,10 +1,11 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function Service() {
   return (
     <section id="service" className="position-relative">
       <div className="position-absolute end-0 z-n1 d-none d-lg-flex">
-        <img src="/images/pattern-1.png" alt="pattern" />
+        <Image src="/images/pattern-1.png" alt="pattern" />
       </div>
       <div className="container">
         <div className="row align-items-center">

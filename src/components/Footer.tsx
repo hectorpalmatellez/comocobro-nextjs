@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -7,7 +9,7 @@ export default function Footer() {
         <div className="row">
           <div className="col-md-3 mb-4">
             <div className="footer-menu">
-              <img src="images/logo-dark.png" alt="logo" />
+              <Image src="images/logo-dark.png" alt="logo" />
               <p className="text-white mt-3">
                 Ea, facilis sint. Deleniti libero placeat qui pariatur nihil. Ab officia odit iusto ullam? Error, eum
                 sed magnam nihil dolores illum nisi!
@@ -34,29 +36,29 @@ export default function Footer() {
             <div className="footer-menu">
               <ul className="menu-list list-unstyled">
                 <li className="menu-item mb-3">
-                  <a href="#" className="footer-link">
+                  <Link href="#" className="footer-link">
                     Inicio
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item mb-3">
-                  <a href="#" className="footer-link">
+                  <Link href="#" className="footer-link">
                     About us
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item mb-3">
-                  <a href="#" className="footer-link">
+                  <Link href="#" className="footer-link">
                     Offer{' '}
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item mb-3">
-                  <a href="#" className="footer-link">
+                  <Link href="#" className="footer-link">
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item mb-3">
-                  <a href="#" className="footer-link">
-                    Conatct Us
-                  </a>
+                  <Link href="#" className="footer-link">
+                    Contact Us
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -65,24 +67,24 @@ export default function Footer() {
             <div className="footer-menu">
               <ul className="menu-list list-unstyled">
                 <li className="menu-item mb-3">
-                  <a href="#" className="footer-link">
+                  <Link href="#" className="footer-link">
                     Payments
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item mb-3">
-                  <a href="#" className="footer-link">
+                  <Link href="#" className="footer-link">
                     Packages
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item mb-3">
-                  <a href="#" className="footer-link">
+                  <Link href="#" className="footer-link">
                     promotions
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item mb-3">
-                  <a href="#" className="footer-link">
+                  <Link href="#" className="footer-link">
                     FAQs
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -92,9 +94,9 @@ export default function Footer() {
               <p className="text-white">
                 Harum officiis beatae quisquam ratione nostrum ipsum, delectus minima aliquam ut quaerat?
               </p>
-              <a href="#" className="text-white fs-3 text-decoration-underline">
+              <Link href="#" className="text-white fs-3 text-decoration-underline">
                 yourcontact@gmail.com
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -106,19 +108,19 @@ export default function Footer() {
             <div className="social-links mt-4">
               <ul className="d-flex list-unstyled gap-3">
                 <li className="social">
-                  <a href="#"></a>
+                  <Link href="#"></Link>
                 </li>
                 <li className="social">
-                  <a href="#"></a>
+                  <Link href="#"></Link>
                 </li>
                 <li className="social">
-                  <a href="#"></a>
+                  <Link href="#"></Link>
                 </li>
                 <li className="social">
-                  <a href="#"></a>
+                  <Link href="#"></Link>
                 </li>
                 <li className="social">
-                  <a href="#"></a>
+                  <Link href="#"></Link>
                 </li>
               </ul>
             </div>

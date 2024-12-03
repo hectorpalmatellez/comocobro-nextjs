@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Nav() {
   return (
@@ -7,7 +8,7 @@ export default function Nav() {
       <div className="container-fluid px-md-5">
         <div className="main-logo">
           <Link href="/">
-            <img src="/images/logo.png" alt="logo" className="img-fluid" />
+            <Image src="/images/logo.png" alt="logo" className="img-fluid" />
           </Link>
         </div>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function AboutUs() {
   return (
@@ -7,7 +8,7 @@ export default function AboutUs() {
         <div className="row">
           <div className="col-lg-6">
             <div className="image-holder">
-              <img src="/images/about.png" alt="banner" className="img-fluid " />
+              <Image src="/images/about.png" alt="banner" className="img-fluid " />
             </div>
           </div>
           <div className="col-lg-6 mt-5 mt-lg-0">
